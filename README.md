@@ -6,7 +6,7 @@ Click [- here -](https://dynamic-portfolio-ten.vercel.app/) to go to the deploye
 
 ## ScreenShot
 
-![Screenshot of live app.](./deployedimg/dynamicportfolioss.png)
+![Screenshot of live app.](/public/deployedimg/dynamicportfolioss.png)
 
 ## Description
 
