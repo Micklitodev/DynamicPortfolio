@@ -9,13 +9,14 @@
 
 .container {
   height: 525px;
-  margin-left: 60px;
+  margin-left: 20%;
   margin-top: 60px;
   margin-bottom: 60px;
-  margin-right: 60px;
+  margin-right: 17%;
   border-radius: 10px;
   background: rgba(var(--card-rgb), 0.1);
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  max-width: 800px;
 }
 
 .description {
@@ -63,7 +64,7 @@
   max-width: 30ch;
 }
 
-.cert {
+.componenth2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,10 +79,28 @@
   bottom: 0;
 }
 
-.collage {
-  margin-top: 2%;
+.projects {
+  max-width: 650px;
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
-.collage img {
-  border-radius: 10px;
+.favicon {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+.contact {
+  display: inline-flex;
+  place-items: center;
+  margin-left:  49%;
+  margin-right: 20%;
+  margin-top: 2%;
+  transform: translate( -50%, -50%);
+}
+
+.slidecontainer {
+  margin-left: 15%;
+  margin-right: 14%;
+  margin-top: 1%;
 }

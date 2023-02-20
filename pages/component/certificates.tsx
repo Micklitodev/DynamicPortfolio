@@ -7,10 +7,11 @@ type stylediv = {
   display: string;
   alignItems: string;
   justifyContent: string;
-  height: number;
   borderRadius: number;
+  height: number;
+  width: number;
   backgroundSize: string;
-  width: string;
+  backgroundPosition: string;
 };
 
 type slideobj = [
@@ -61,43 +62,44 @@ const divStyle: stylediv = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  height: 400,
-  borderRadius: 10, 
-  backgroundSize: 'cover',
-  width: '500px'
+  borderRadius: 10,
+  height: 450,
+  width: 570,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
 };
 
 const slideImages: slideobj = [
   {
-    url: "/html.png",
+    url: "/certs/html.png",
     caption: "HTML",
   },
   {
-    url: "/css.png",
+    url: "/certs/css.png",
     caption: "CSS",
   },
   {
-    url: "/js.png",
+    url: "/certs/js.png",
     caption: "JAVASCRIPT",
   },
   {
-    url: "/typescript.png",
+    url: "/certs/typescript.png",
     caption: "TYPESCRIPT",
   },
   {
-    url: "/react.png",
+    url: "/certs/react.png",
     caption: "REACT",
   },
   {
-    url: "/node.png",
+    url: "/certs/node.png",
     caption: "NODE.JS",
   },
   {
-    url: "/express.png",
+    url: "/certs/express.png",
     caption: "EXPRESS",
   },
   {
-    url: "/mongo.png",
+    url: "/certs/mongo.png",
     caption: "MONGODB",
   },
 ];
@@ -105,8 +107,10 @@ const slideImages: slideobj = [
 const CertSlideShow = (): JSX.Element => {
   return (
     <>
-      <h2 className={styles.cert} id='certs'> My Certifications </h2>
-      <div id="slideEl" className="slide-container">
+      <h2 className={styles.componenth2} id="certs">
+        My Certifications
+      </h2>
+      <div className={styles.slidecontainer}>
         <Slide>
           {slideImages.map((slideImage, index: number) => (
             <div key={index}>

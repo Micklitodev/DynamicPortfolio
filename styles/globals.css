@@ -5,6 +5,8 @@
 
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  
+  --light: rgb(217, 242, 251);
 }
 
 * {
@@ -25,7 +27,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: rgb(191, 191, 191);
+  color: rgb(237, 236, 236);
 }
 
 a {
@@ -38,10 +40,10 @@ a {
   border-radius: 80px;
 }
 
-#slideEl {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 50px;
+/* psuedo class effects */
+
+a img:hover {
+  opacity: 0.4;
 }
 
 @tailwind base;

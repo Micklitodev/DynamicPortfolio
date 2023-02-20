@@ -34,7 +34,7 @@ const AboutMe = (): JSX.Element => {
         <div>
           <Image
             className="pfp"
-            src="/pfp.png"
+            src="/aboutme/pfp.png"
             alt="Profile Picture"
             width={150}
             height={150}
@@ -53,7 +53,6 @@ const AboutMe = (): JSX.Element => {
             with Non Relational DB's such as Mongo, firebase.io.
           </p>
         </div>
-
         <div>
           <a
             href="/downloads/resume.pdf"
@@ -63,7 +62,7 @@ const AboutMe = (): JSX.Element => {
           >
             <Image
               style={color}
-              src="/dlicon.svg"
+              src="/aboutme/dlicon.svg"
               alt="Download"
               width={30}
               height={30}
