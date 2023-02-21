@@ -1,7 +1,10 @@
 {
   "name": "dynamicportfolio",
   "version": "0.1.0",
-  "private": true,
+  "engines": {
+    "node": "12.22.7"
+  },
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
