@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 const Projects = (): JSX.Element => {
   return (
     <>
-      <h2 className={styles.componenth2}> Projects </h2>
+      <h2 id='projects' className={styles.componenth2}> Projects </h2>
       <section className={styles.projects}>
       <div className="relative rounded-xl overflow-auto p-8">
         <div className="relative">

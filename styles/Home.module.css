@@ -95,7 +95,7 @@
   place-items: center;
   margin-left:  49%;
   margin-right: 20%;
-  margin-top: 2%;
+  margin-top: 7%;
   transform: translate( -50%, -50%);
 }
 
@@ -103,4 +103,12 @@
   margin-left: 15%;
   margin-right: 14%;
   margin-top: 1%;
+}
+
+.formEl {
+  position: absolute;
+  top: 250%;
+  width: 300%;
+  right: -106%;
+  margin-top:30px
 }
