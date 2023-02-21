@@ -40,7 +40,7 @@ const AboutMe = (): JSX.Element => {
             height={150}
             priority
           />
-        </div>
+        </div>  
         <div>
           <p className={styles.description}>
             Self-driven and passionate about software development. Currently
