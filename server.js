@@ -8,7 +8,7 @@ app.use(cors());
 
 app.post("/", (req, res) => {
   console.log(req.body);
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "https://dynamic-portfolio-ten.vercel.app");
   res.send();
 });
 
