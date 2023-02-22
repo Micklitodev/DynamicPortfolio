@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-app.post("/api/*", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
   // res.setHeader("Access-Control-Allow-Origin", "https://dynamic-portfolio-ten.vercel.app/");
   res.send();
