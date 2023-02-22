@@ -10,7 +10,7 @@ app.post("/", (req, res) => {
   console.log(req.body);
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Cache-Control", "max-age=3600");
-  res.send();
+  res.send(); 
 });
 
 app.listen(PORT, () => {

@@ -9,7 +9,7 @@ const Contact = (): JSX.Element => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-        },
+        }, 
         body: JSON.stringify({
           email: mail[1],
           name: mail[0],
