@@ -8,9 +8,7 @@ const Contact = (): JSX.Element => {
       fetch("/", {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer EaTsfg77P62MfvWDRsutvV78',
-          'Accept': 'application/json'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: mail[1],
