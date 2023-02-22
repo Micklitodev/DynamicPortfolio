@@ -2,6 +2,25 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
 const Contact = (): JSX.Element => {
+
+  const sendMail = async (mail: any) => {
+    try {
+      fetch("http://localhost:5000", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: mail[1],
+          name: mail[0],
+          message: mail[2],
+        }),
+      });
+    } catch (Error) {
+      console.log(Error);
+    }
+  };
+
   function handleClick(evt: React.MouseEvent<HTMLElement>) {
     evt.preventDefault();
     const name = document.getElementById("name-input") as HTMLInputElement;
@@ -14,13 +33,13 @@ const Contact = (): JSX.Element => {
     const emailInput: string = email.value;
     const messageInput: string = message.value;
 
-    
-
     if (!nameInput || !emailInput || !messageInput) {
       alert("must complete all feilds");
     } else {
       const mail = [nameInput, emailInput, messageInput];
       console.log(mail)
+      sendMail(mail);
+    
     }
   }
 
@@ -140,7 +159,6 @@ const Contact = (): JSX.Element => {
                 </div>
 
                 <button
-                  type='submit'
                   onClick={handleClick}
                   className="
                       w-full
@@ -172,4 +190,5 @@ const Contact = (): JSX.Element => {
     </>
   );
 };
+
 export default Contact;
