@@ -37,7 +37,6 @@ const Contact = (): JSX.Element => {
       alert("must complete all feilds");
     } else {
       const mail = [nameInput, emailInput, messageInput];
-      console.log(mail)
       sendMail(mail);
     
     }
