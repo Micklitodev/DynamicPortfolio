@@ -6,10 +6,13 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-app.post("/", (req, res) => {
+const router = require('express-router')
+
+app.use(router)
+
+router.post("/", (req, res) => {
   console.log(req.body);
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Cache-Control", "max-age=3600");
   res.send(); 
 });
 
