@@ -5,7 +5,7 @@ const Contact = (): JSX.Element => {
 
   const sendMail = async (mail: any) => {
     try {
-      fetch("/https://dynamic-portfolio-ten.vercel.app/", {
+      fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
