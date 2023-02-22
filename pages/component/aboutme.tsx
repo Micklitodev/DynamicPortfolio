@@ -50,7 +50,7 @@ const AboutMe = (): JSX.Element => {
             myself in the software development job market. Proficient in writing
             HTML, CSS, Javascript, Node.js, Typescript along associated
             frameworks such as React, Express, Electron. Proficient in working
-            with Non Relational DB's such as Mongo, firebase.io.
+            with Non Relational DB's such as firebase.io, mongoDB. 
           </p>
         </div>
         <div>
