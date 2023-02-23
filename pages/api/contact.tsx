@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 const Contact = (): JSX.Element => {
   const sendMail = async (mail: any) => {
     try {
-      await fetch("/", {
+      await fetch("/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

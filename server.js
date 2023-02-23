@@ -8,7 +8,7 @@ console.log(PORT)
 app.use(express.json());
 app.use(cors());
 
-app.post("/", (req, res) => {
+app.post("/send", (req, res) => {
   console.log(req.body);
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.status(200).send("Received a POST HTTP request");
