@@ -5,7 +5,7 @@ import AboutMe from "./component/aboutme";
 import Projects from "./component/projects";
 import Nav from "./component/nav";
 import CertSlideShow from "./component/certificates";
-import Contact from "./component/contact";
+import Contact from "./api/contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
