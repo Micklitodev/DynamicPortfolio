@@ -6,10 +6,10 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-app.post("*", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.status(200);
+  res.status(200).send("Received a POST HTTP request");
 });
 
 app.listen(PORT, () => {

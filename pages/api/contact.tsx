@@ -2,14 +2,13 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
 const Contact = (): JSX.Element => {
-
   const sendMail = async (mail: any) => {
     try {
-      fetch("*", {
+      await fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-        }, 
+        },
         body: JSON.stringify({
           email: mail[1],
           name: mail[0],
@@ -38,7 +37,6 @@ const Contact = (): JSX.Element => {
     } else {
       const mail = [nameInput, emailInput, messageInput];
       sendMail(mail);
-    
     }
   }
 
