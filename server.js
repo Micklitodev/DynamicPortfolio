@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-app.post("*", (req, res) => {
+app.get("*", (req, res) => {
   console.log(req.body);
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.status(200);
