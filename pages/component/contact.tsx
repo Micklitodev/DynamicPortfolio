@@ -5,7 +5,7 @@ const Contact = (): JSX.Element => {
 
   const sendMail = async (mail: any) => {
     try {
-      await fetch("/", {
+      await fetch("/api/server", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
