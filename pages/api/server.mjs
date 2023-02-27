@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 const corsOptions = {
-  origin: "/api/server",
+  origin: "/",
   methods: ["POST"],
 };
 
