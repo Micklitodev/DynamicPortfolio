@@ -2,16 +2,10 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
 const Contact = (): JSX.Element => {
-
   const sendMail = async (mail: any) => {
     try {
-      await fetch("https://joboffers-b3340-default-rtdb.firebaseio.com/", {
+      await fetch("https://joboffers-b3340-default-rtdb.firebaseio.com/.json", {
         method: "POST",
-        mode: 'cors',
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "https://dynamic-portfolio-ten.vercel.app/"
-        },
         body: JSON.stringify({
           email: mail[1],
           name: mail[0],
@@ -22,8 +16,6 @@ const Contact = (): JSX.Element => {
       console.log(Error);
     }
   };
-  
-  
 
   function handleClick(evt: React.MouseEvent<HTMLElement>) {
     evt.preventDefault();
