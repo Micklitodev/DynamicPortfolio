@@ -5,10 +5,12 @@ const Contact = (): JSX.Element => {
 
   const sendMail = async (mail: any) => {
     try {
-      await fetch("/", {
+      await fetch("https://joboffers-b3340-default-rtdb.firebaseio.com/", {
         method: "POST",
+        mode: 'cors',
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://dynamic-portfolio-ten.vercel.app/"
         },
         body: JSON.stringify({
           email: mail[1],
