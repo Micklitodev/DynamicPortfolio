@@ -2,9 +2,10 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
 const Contact = (): JSX.Element => {
+
   const sendMail = async (mail: any) => {
     try {
-      await fetch("/", {
+      await fetch("/api/send-mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,6 +20,8 @@ const Contact = (): JSX.Element => {
       console.log(Error);
     }
   };
+  
+  
 
   function handleClick(evt: React.MouseEvent<HTMLElement>) {
     evt.preventDefault();

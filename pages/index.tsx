@@ -5,7 +5,7 @@ import AboutMe from "./component/aboutme";
 import Projects from "./component/projects";
 import Nav from "./component/nav";
 import CertSlideShow from "./component/certificates";
-import Contact from "./api/contact";
+import Contact from "./component/contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +34,6 @@ const Home = (): JSX.Element => {
       </main>
     </>
   );
-}
+};
 
 export default Home;
