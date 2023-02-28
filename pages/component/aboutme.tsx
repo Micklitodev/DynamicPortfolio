@@ -29,7 +29,7 @@ const AboutMe = (): JSX.Element => {
     <>
       <section id="about-me" className={styles.main}>
         <div>
-          <h1> Hi, I'm Mick. </h1>
+          <h2 className={styles.componenth2}> Hi, I'm Mick. </h2>
         </div>
         <div>
           <Image
@@ -40,17 +40,15 @@ const AboutMe = (): JSX.Element => {
             height={150}
             priority
           />
-        </div>  
+        </div>
         <div>
           <p className={styles.description}>
-            Self-driven and passionate about software development. Currently
-            holding ten certificates in software development. Threw code-cademy
-            and enrolled in Georgia Tech for full stack flex. Seeking a Full
-            stack Certification and building my portfolio to better position
-            myself in the software development job market. Proficient in writing
-            HTML, CSS, Javascript, Node.js, Typescript along associated
-            frameworks such as React, Express, Electron. Proficient in working
-            with Non Relational DB's such as firebase.io, mongoDB. 
+            Passionate software engineer. Currently holding ten certificates in
+            software development. Threw code-cademy and enrolled in Georgia Tech
+            for full stack flex. Proficient in writing HTML, CSS, Javascript,
+            Typescript, Node.js along associated frameworks such as React, Next,
+            Express, Electron. Proficient in working with Non Relational DB's
+            such as firebase.io, mongoDB.
           </p>
         </div>
         <div>

@@ -6,6 +6,7 @@ import Projects from "./component/projects";
 import Nav from "./component/nav";
 import CertSlideShow from "./component/certificates";
 import Contact from "./component/contact";
+import Skills from "./component/skills";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,15 @@ const Home = (): JSX.Element => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Nav />
+      <br />
+      <br />
+      <br />
       <main>
         <div className={styles.container}>
           <AboutMe />
+        </div>
+        <div className={styles.container}>
+          <Skills />
         </div>
         <div className={styles.container}>
           <Projects />

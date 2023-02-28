@@ -5,7 +5,10 @@ const Nav = (): JSX.Element => {
 
   return (
     <>
-      <nav className="w-full bg-zinc-900 shadow">
+      <nav
+        className="w-full bg-zinc-900 shadow"
+        style={{ position: "fixed", top: 0, zIndex: 2 }}
+      >
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -59,6 +62,9 @@ const Nav = (): JSX.Element => {
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-gray-600 hover:text-green-400">
                   <a href="#about-me">About Me</a>
+                </li>
+                <li className="text-gray-600 hover:text-green-400">
+                  <a href="#skills">Skills</a>
                 </li>
                 <li className="text-gray-600 hover:text-green-400">
                   <a href="#projects">Projects</a>

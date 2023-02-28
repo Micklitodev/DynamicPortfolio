@@ -34,9 +34,10 @@ const Contact = (): JSX.Element => {
     } else {
       const mail = [nameInput, emailInput, messageInput];
       sendMail(mail);
-      let formEl: any = document.getElementById('contactForm') as HTMLElement;
-      formEl.innerHTML = 'Thank you! I will be in contact with you as soon as possible!'
-      formEl.style.cssText = 'text-align: center; font-size: 18px;'
+      let formEl: any = document.getElementById("contactForm") as HTMLElement;
+      formEl.innerHTML =
+        "Thank you! I will be in contact with you as soon as possible!";
+      formEl.style.cssText = "text-align: center; font-size: 18px;";
     }
   }
 
@@ -81,7 +82,7 @@ const Contact = (): JSX.Element => {
             />
           </a>
         </div>
-        <div className={styles.formEl} id='contactForm'>
+        <div className={styles.formEl} id="contactForm">
           <div className="mb-32 text-center text-gray-800">
             <div className="mx-auto px-3 lg:px-6">
               <form>

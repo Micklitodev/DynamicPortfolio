@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 95vh;
+  padding: 5rem;
+  min-height: 85vh;
 }
 
 .container {
@@ -71,18 +71,19 @@
   position: relative;
   padding: 5px;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 .downloadbtn {
   position: absolute;
-  top: 620px;
+  top: 610px;
   bottom: 0;
 }
 
 .projects {
-  max-width: 650px;
-  margin-left: 9%;
-  margin-right: 9%;
+  max-width: 660px;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 .favicon {
@@ -93,16 +94,16 @@
 .contact {
   display: inline-flex;
   place-items: center;
-  margin-left:  49%;
+  margin-left: 49%;
   margin-right: 20%;
   margin-top: 7%;
-  transform: translate( -50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .slidecontainer {
   margin-left: 15%;
   margin-right: 14%;
-  margin-top: 1%;
+  margin-top: 0.5%;
 }
 
 .formEl {
@@ -110,5 +111,67 @@
   top: 250%;
   width: 300%;
   right: -106%;
-  margin-top:30px
+  margin-top: 30px;
+}
+
+.linkprops {
+  position: relative;
+  z-index: 1;
+}
+
+.skilltag {
+  margin-bottom: 5px;
+}
+
+.frontend {
+  display: grid;
+  place-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.backend {
+  display: grid;
+  place-items: center;
+  padding: 5px;
+}
+
+@media screen and (max-width: 893px) {
+  .description {
+    max-height: 163px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .projects {
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .slidecontainer {
+    margin-top: 7%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slidecontainer {
+    margin-top: 17%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .slidecontainer {
+    margin-top: 30%;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .slidecontainer {
+    margin-top: 50%;
+  }
 }

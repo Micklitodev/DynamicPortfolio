@@ -8,8 +8,8 @@ type stylediv = {
   alignItems: string;
   justifyContent: string;
   borderRadius: number;
-  height: number;
-  width: number;
+  maxHeight: number;
+  maxWidth: number;
   backgroundSize: string;
   backgroundPosition: string;
 };
@@ -50,12 +50,13 @@ type slideobj = [
 ];
 
 const spanStyle: object = {
-  padding: 12,
+  padding: 8,
   borderRadius: 5,
   background: "rgb(39 39 42)",
   color: "rgb(209 213 219)",
   position: "absolute",
-  top: 50,
+  top: 30,
+  fontSize: 14,
 };
 
 const divStyle: stylediv = {
@@ -63,8 +64,8 @@ const divStyle: stylediv = {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: 10,
-  height: 450,
-  width: 570,
+  maxHeight: 450,
+  maxWidth: 570,
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -121,6 +122,11 @@ const CertSlideShow = (): JSX.Element => {
                 }}
               >
                 <span style={spanStyle}>{slideImage.caption}</span>
+                <img
+                  src={slideImage.url}
+                  alt={slideImage.caption}
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
             </div>
           ))}
