@@ -94,7 +94,7 @@ const Projects = (): JSX.Element => {
                 >
                   <Image
                     className="w-full object-cover rounded-lg"
-                    src="/projects/wapiss.png"
+                    src="/projects/WAPIss.png"
                     alt="Get local weather data"
                     width={500}
                     height={500}
