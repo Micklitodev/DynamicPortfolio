@@ -90,6 +90,10 @@ a img:hover {
   width: 60%;
 }
 
+.pic {
+  height: 100px
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
