@@ -26,7 +26,7 @@ const Home = (): JSX.Element => {
       <br />
       <main>
         <ScrollReveal.div animation="slide-in-bottom">
-          <div className={styles.container} style={{height: '100vh'}}>
+          <div className={styles.container} style={{height: '80vh'}}>
             <AboutMe />
           </div>
         </ScrollReveal.div>
