@@ -20,6 +20,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-slideshow-image": "^4.2.1",
+    "reveal-on-scroll-react": "^0.0.6",
     "typescript": "4.9.5",
     "yarn": "^1.22.19"
   },

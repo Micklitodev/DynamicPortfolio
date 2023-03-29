@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import React, { useState, useEffect } from "react";
+import { ScrollReveal } from "reveal-on-scroll-react";
 
 const AboutMe = (): JSX.Element => {
   const [color, setColor] = useState<object>();
@@ -27,6 +28,7 @@ const AboutMe = (): JSX.Element => {
 
   return (
     <>
+    <ScrollReveal.div>
       <section id="about-me" className={styles.main}>
         <div>
           <h2 className={styles.componenth2}> Hi, I'm Mick. </h2>
@@ -69,6 +71,7 @@ const AboutMe = (): JSX.Element => {
           </a>
         </div>
       </section>
+      </ScrollReveal.div>
     </>
   );
 };

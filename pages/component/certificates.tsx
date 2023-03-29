@@ -3,6 +3,8 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import styles from "@/styles/Home.module.css";
 
+import { ScrollReveal } from "reveal-on-scroll-react";
+
 type stylediv = {
   display: string;
   alignItems: string;
@@ -108,30 +110,32 @@ const slideImages: slideobj = [
 const CertSlideShow = (): JSX.Element => {
   return (
     <>
-      <h2 className={styles.componenth2} id="certs">
-        My Certifications
-      </h2>
-      <div className={styles.slidecontainer}>
-        <Slide>
-          {slideImages.map((slideImage, index: number) => (
-            <div key={index}>
-              <div
-                style={{
-                  ...divStyle,
-                  backgroundImage: `url(${slideImage.url})`,
-                }}
-              >
-                <span style={spanStyle}>{slideImage.caption}</span>
-                <img
-                  src={slideImage.url}
-                  alt={slideImage.caption}
-                  style={{ width: "100%", height: "auto" }}
-                />
+      <ScrollReveal.div>
+        <h2 className={styles.componenth2} id="certs">
+          My Certifications
+        </h2>
+        <div className={styles.slidecontainer}>
+          <Slide>
+            {slideImages.map((slideImage, index: number) => (
+              <div key={index}>
+                <div
+                  style={{
+                    ...divStyle,
+                    backgroundImage: `url(${slideImage.url})`,
+                  }}
+                >
+                  <span style={spanStyle}>{slideImage.caption}</span>
+                  <img
+                    src={slideImage.url}
+                    alt={slideImage.caption}
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slide>
-      </div>
+            ))}
+          </Slide>
+        </div>
+      </ScrollReveal.div>
     </>
   );
 };

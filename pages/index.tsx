@@ -8,6 +8,8 @@ import CertSlideShow from "./component/certificates";
 import Contact from "./component/contact";
 import Skills from "./component/skills";
 
+import { ScrollReveal } from "reveal-on-scroll-react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const Home = (): JSX.Element => {
@@ -23,21 +25,35 @@ const Home = (): JSX.Element => {
       <br />
       <br />
       <main>
-        <div className={styles.container}>
-          <AboutMe />
-        </div>
-        <div className={styles.container}>
-          <Skills />
-        </div>
-        <div className={styles.container}>
-          <Projects />
-        </div>
-        <div className={styles.container}>
-          <CertSlideShow />
-        </div>
-        <div className={styles.container}>
-          <Contact />
-        </div>
+        <ScrollReveal.div animation="slide-in-bottom">
+          <div className={styles.container}>
+            <AboutMe />
+          </div>
+        </ScrollReveal.div>
+
+        <ScrollReveal.div animation="slide-in-right">
+          <div className={styles.container}>
+            <Skills />
+          </div>
+        </ScrollReveal.div>
+
+        <ScrollReveal.div animation="slide-in-left">
+          <div className={styles.container}>
+            <Projects />
+          </div>
+        </ScrollReveal.div>
+
+        <ScrollReveal.div animation="slide-in-right">
+          <div className={styles.container}>
+            <CertSlideShow />
+          </div>
+        </ScrollReveal.div>
+
+        <ScrollReveal.div animation="slide-in-left">
+          <div className={styles.container}>
+            <Contact />
+          </div>
+        </ScrollReveal.div>
       </main>
     </>
   );
