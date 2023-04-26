@@ -50,7 +50,8 @@ const AboutMe = (): JSX.Element => {
             for full stack flex. Proficient in writing HTML, CSS, Javascript,
             Typescript, Node.js along associated frameworks such as React, Next,
             Express, Electron. Proficient in working with Non Relational DB's
-            such as firebase.io, mongoDB.
+            such as firebase.io, mongoDB and Relational DB's like MySQL and ORM's
+            like sequelize.
           </p>
         </div>
         <div>

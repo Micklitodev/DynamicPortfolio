@@ -23,18 +23,18 @@ const Projects = (): JSX.Element => {
               <div className="relative columns-1 sm:columns-3 gap-8">
                 <div className="relative aspect-w-16 aspect-h-9">
                   <Link
-                    href="https://github.com/micklitodev/dynamicportfolio/"
+                    href="https://github.com/BrianLucy/Georgia-on-your-mind"
                     target="_blank"
                     className={styles.linkprops}
                   >
                     {" "}
                     <div className={styles.imgtag}>
-                      Typescript, Next.js, Tailwind
+                      JS, Express Sessions, Sequelize
                     </div>
                     <Image
                       className="pic w-full object-cover rounded-lg"
-                      src="/projects/dynamicportfolioss.png"
-                      alt="Portfolio Repo"
+                      src="/projects/parkifyss.png"
+                      alt="Parkify"
                       width={500}
                       height={500}
                       loading="lazy"
@@ -106,7 +106,7 @@ const Projects = (): JSX.Element => {
                     target="_blank"
                     className={styles.linkprops}
                   >
-                    <div className={styles.imgtag}>Node.js, OOP, Inquirer</div>
+                    <div className={styles.imgtag}>Node.js, OOP, Jest, inquirer</div>
                     <Image
                       className="pic w-full object-cover rounded-lg"
                       src="/projects/tpgss.png"
@@ -142,7 +142,7 @@ const Projects = (): JSX.Element => {
                     target="_blank"
                     className={styles.linkprops}
                   >
-                    <div className={styles.imgtag}>JS, NODE.JS, .md</div>
+                    <div className={styles.imgtag}> node.JS, markdown, JS</div>
                     <Image
                       className=" pic w-full object-cover rounded-lg"
                       src="/projects/gorscreenshot.png"
@@ -165,7 +165,7 @@ const Projects = (): JSX.Element => {
                     </div>
                     <Image
                       className=" pic w-full object-cover rounded-lg"
-                      src="/projects/dsss.png"
+                      src="/projects/ecmsss.png"
                       alt="SQL back end"
                       width={500}
                       height={500}
@@ -176,17 +176,17 @@ const Projects = (): JSX.Element => {
 
                 <div className="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8">
                   <Link
-                    href="https://github.com/micklitodev/passwordgenerator/"
+                    href="https://github.com/micklitodev/dynamicportfolio/"
                     target="_blank"
                     className={styles.linkprops}
                   >
                     <div className={styles.imgtag}>
-                      JS, Random Pass Generator
+                      Typescript, Next.js, Tailwind
                     </div>
                     <Image
                       className="pic w-full object-cover rounded-lg"
-                      src="/projects/passgenss.png"
-                      alt="Coming soon"
+                      src="/projects/dynamicportfolioss.png"
+                      alt="Portfolio Repo"
                       width={500}
                       height={500}
                       loading="lazy"
