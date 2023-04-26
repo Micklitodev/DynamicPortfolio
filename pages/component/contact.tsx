@@ -165,7 +165,7 @@ const Contact = (): JSX.Element => {
                       w-full
                       px-6
                       py-2.5
-                      bg-zinc-900 
+                      bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200
                       text-gray-700
                       font-medium
                       text-xs
@@ -173,9 +173,9 @@ const Contact = (): JSX.Element => {
                       uppercase
                       rounded
                       shadow-md
-                      hover:bg-green-400 hover:shadow-lg
-                      focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0
-                      active:bg-green-400 active:shadow-lg
+                      hover: hover:shadow-lg
+                      focus: focus:shadow-lg focus:outline-none focus:ring-0
+                      active: active:shadow-lg
                       transition
                       duration-150
                       ease-in-out

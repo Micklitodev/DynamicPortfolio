@@ -14,6 +14,7 @@ type stylediv = {
   maxWidth: number;
   backgroundSize: string;
   backgroundPosition: string;
+  margin: string;
 };
 
 type slideobj = [
@@ -70,6 +71,7 @@ const divStyle: stylediv = {
   maxWidth: 570,
   backgroundSize: "cover",
   backgroundPosition: "center",
+  margin: "0 auto",
 };
 
 const slideImages: slideobj = [
@@ -114,7 +116,6 @@ const CertSlideShow = (): JSX.Element => {
         <h2 className={styles.componenth2} id="certs">
           My Certifications
         </h2>
-        <div className={styles.slidecontainer}>
           <Slide>
             {slideImages.map((slideImage, index: number) => (
               <div key={index}>
@@ -134,7 +135,6 @@ const CertSlideShow = (): JSX.Element => {
               </div>
             ))}
           </Slide>
-        </div>
       </ScrollReveal.div>
     </>
   );

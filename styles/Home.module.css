@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  z-index: 2;
 }
 
 .container {
@@ -13,11 +14,52 @@
   margin-bottom: 60px;
   margin-right: 17%;
   margin-left: 20%;
-  border-radius: 10px;
-  background: rgba(var(--card-rgb), 0.1);
-  border: 1px solid rgba(var(--card-border-rgb), 0.15);
   max-width: 800px;
 }
+
+.cloud {
+  position: fixed;
+  width: 100%;
+  z-index: -2;
+  top: 10;
+  left:30px;
+  opacity: .7;
+  
+}
+
+.sidebarContainer {
+  position: fixed;
+  top: 30vh;
+  left: 10px;
+  background-color: rgb(220, 244, 255);
+  border: 1px solid  rgb(255, 255, 255);
+  padding: 2px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.sidebar {
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar li {
+  display: block;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
 
 .description {
   display: inherit;
@@ -27,7 +69,8 @@
   max-width: 800px;
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
+  max-width: 700px;
+  text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
 }
@@ -70,20 +113,18 @@
   align-items: center;
   position: relative;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 20px;
 }
 
 .downloadbtn {
   position: absolute;
-  top: 610px;
-  bottom: 0;
+  top: 540px;
+  left: 49%;
 }
 
 .projects {
   max-width: 660px;
-  margin-left: 8%;
-  margin-right: 5%;
 }
 
 .imgtag {
@@ -107,13 +148,12 @@
   place-items: center;
   margin-left: 49%;
   margin-right: 20%;
-  margin-top: 7%;
+  margin-top: 4%;
   transform: translate(-50%, -50%);
 }
 
 .slidecontainer {
-  margin-left: 15%;
-  margin-right: 14%;
+  margin-left: 35%;
   margin-top: 0.5%;
 }
 
@@ -122,7 +162,7 @@
   top: 250%;
   width: 300%;
   right: -106%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .linkprops {
@@ -137,8 +177,8 @@
 .frontend {
   display: grid;
   place-items: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-top: 20px;
   padding: 5px;
 }
 

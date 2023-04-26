@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import Cloud from "./component/cloudhead";
 import AboutMe from "./component/aboutme";
 import Projects from "./component/projects";
 import Nav from "./component/nav";
@@ -9,6 +10,7 @@ import Contact from "./component/contact";
 import Skills from "./component/skills";
 
 import { ScrollReveal } from "reveal-on-scroll-react";
+import Sidebar from "./component/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,35 +26,28 @@ const Home = (): JSX.Element => {
       <br />
       <br />
       <br />
+
       <main>
-        <ScrollReveal.div animation="slide-in-bottom">
-          <div className={styles.container} style={{height: '80vh'}}>
-            <AboutMe />
-          </div>
+        <Cloud />
+        <Sidebar />
+        <ScrollReveal.div animation="slide-in-bottom" duration={2}>
+          <AboutMe />
         </ScrollReveal.div>
-
+        <br />
         <ScrollReveal.div animation="slide-in-right">
-          <div className={styles.container}>
-            <Skills />
-          </div>
+          <Skills />
         </ScrollReveal.div>
-
+        <br />
         <ScrollReveal.div animation="slide-in-left">
-          <div className={styles.container}>
-            <Projects />
-          </div>
+          <Projects />
         </ScrollReveal.div>
-
+        <br />
         <ScrollReveal.div animation="slide-in-right">
-          <div className={styles.container}>
-            <CertSlideShow />
-          </div>
+          <CertSlideShow />
         </ScrollReveal.div>
-
+        <br />
         <ScrollReveal.div animation="slide-in-left">
-          <div className={styles.container}>
-            <Contact />
-          </div>
+          <Contact />
         </ScrollReveal.div>
       </main>
     </>

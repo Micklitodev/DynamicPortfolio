@@ -13,7 +13,7 @@ const AboutMe = (): JSX.Element => {
 
   const core: colorStyle = {
     filter:
-      "invert(74%) sepia(83%) saturate(1552%) hue-rotate(87deg) brightness(119%) contrast(159%)",
+      "invert(80%) sepia(80%) saturate(1152%) hue-rotate(87deg) brightness(120%) contrast(129%)",
   };
 
   function handleClick() {

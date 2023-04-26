@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ScrollReveal } from "reveal-on-scroll-react";
 
 const Nav = (): JSX.Element => {
   const [navbar, setNavbar] = useState<boolean>(false);
@@ -6,14 +7,14 @@ const Nav = (): JSX.Element => {
   return (
     <>
       <nav
-        className="w-full bg-zinc-900 shadow"
+        className="w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 shadow"
         style={{ position: "fixed", top: 0, zIndex: 2 }}
       >
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <a href="#">
-                <h2 className="text-2xl font-bold">Portfolio</h2>
+                <h2 className="text-2xl font-bold"></h2>
               </a>
               <div className="md:hidden">
                 <button
@@ -60,21 +61,35 @@ const Nav = (): JSX.Element => {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-gray-600 hover:text-green-400">
-                  <a href="#about-me">About Me</a>
-                </li>
-                <li className="text-gray-600 hover:text-green-400">
-                  <a href="#skills">Skills</a>
-                </li>
-                <li className="text-gray-600 hover:text-green-400">
-                  <a href="#projects">Projects</a>
-                </li>
-                <li className="text-gray-600 hover:text-green-400">
-                  <a href="#certs">Certfications</a>
-                </li>
-                <li className="text-gray-600 hover:text-green-400">
-                  <a href="#contact">Contact</a>
-                </li>
+                <ScrollReveal.div duration={1}>
+                  <li className="text-gray-600 hover:text-blue-300">
+                    <a href="#about-me">About Me</a>
+                  </li>
+                </ScrollReveal.div>
+                <ScrollReveal.div duration={2}>
+                  <li className="text-gray-600 hover:text-pink-300">
+                    <a href="#skills">Skills</a>
+                  </li>
+                </ScrollReveal.div>
+                <ScrollReveal.div duration={3}>
+                  <li className="text-gray-600 hover:text-purple-300">
+                    <a href="#projects">Projects</a>
+                  </li>
+                </ScrollReveal.div>
+                <ScrollReveal.div duration={4}>
+                  <li className="text-gray-600 hover:text-blue-300">
+                    <a href="#certs">Certfications</a>
+                  </li>
+                </ScrollReveal.div>
+                <ScrollReveal.div duration={5}>
+                  <li className="text-gray-600 hover:text-pink-300">
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ScrollReveal.div>
+                <ScrollReveal.div duration={6}>
+                  <li className="text-gray-600 hover:text-purple-300">
+                  </li>
+                </ScrollReveal.div>
               </ul>
             </div>
           </div>

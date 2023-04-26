@@ -12,7 +12,7 @@ const Projects = (): JSX.Element => {
           {" "}
           Projects{" "}
         </h2>
-        <section className={styles.projects}>
+        <section className={styles.frontend}>
           <div className="relative rounded-xl overflow-auto p-8">
             <div className="relative">
               <div className="absolute inset-0 -top-8 -bottom-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
