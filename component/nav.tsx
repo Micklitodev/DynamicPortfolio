@@ -1,8 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ScrollReveal } from "reveal-on-scroll-react";
 
 const Nav = (): JSX.Element => {
   const [navbar, setNavbar] = useState<boolean>(false);
+  const [userLogState, setUserLogState] = useState<any>(false);
+
+  function logoutClick() {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/logoutroute", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: "logout",
+          }),
+        });
+
+        if (response.ok) {
+          sessionStorage.setItem("logstate", "false");
+          window.location.href = "/";
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }
+
+  useEffect(() => {
+    const sesslog = sessionStorage.getItem("logstate");
+    setUserLogState(sesslog);
+  }, []);
 
   return (
     <>
@@ -83,13 +114,27 @@ const Nav = (): JSX.Element => {
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={5}>
                   <li className="text-gray-600 hover:text-pink-300">
-                    <a href="#contact">Contact</a>
+                    <a href="#reviews">Reviews</a>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={6}>
                   <li className="text-gray-600 hover:text-purple-300">
+                    <a href="#contact">Contact</a>
                   </li>
                 </ScrollReveal.div>
+                {userLogState === "false" ? (
+                  <ScrollReveal.div duration={7}>
+                    <li className="text-gray-600 hover:text-purple-300">
+                      <a href="/login">Log In</a>
+                    </li>
+                  </ScrollReveal.div>
+                ) : (
+                  <ScrollReveal.div duration={7}>
+                    <li className="text-gray-600 hover:text-purple-300">
+                      <a onClick={logoutClick}>Log Out</a>
+                    </li>
+                  </ScrollReveal.div>
+                )}
               </ul>
             </div>
           </div>

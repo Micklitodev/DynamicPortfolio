@@ -113,9 +113,9 @@ const CertSlideShow = (): JSX.Element => {
   return (
     <>
       <ScrollReveal.div>
-        <h2 className={styles.componenth2} id="certs">
-          My Certifications
-        </h2>
+        <div id="certs">
+          <br />
+          <h2 className={styles.componenth2}>My Certifications</h2>
           <Slide>
             {slideImages.map((slideImage, index: number) => (
               <div key={index}>
@@ -135,6 +135,7 @@ const CertSlideShow = (): JSX.Element => {
               </div>
             ))}
           </Slide>
+        </div>
       </ScrollReveal.div>
     </>
   );

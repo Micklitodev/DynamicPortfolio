@@ -189,6 +189,18 @@
   padding: 5px;
 }
 
+.reviewcard {
+  margin-bottom: 10px;
+  max-width: 350px;
+}
+
+.staricon {
+  color:rgb(93, 93, 93);
+  margin-left: 2px;
+  max-height: 15px;
+  display: inline-block;
+}
+
 @media screen and (max-width: 893px) {
   .description {
     max-height: 163px;

@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/server.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/server.mjs", "server.js", "config/connection.ts", "pages/api/logoutroute.js", "pages/api/session.js", "pages/api/logoutroute.js", "models/user.js", "models/review.js", "models/index.js"],
   "exclude": ["node_modules"]
 }
