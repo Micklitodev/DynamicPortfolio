@@ -22,7 +22,7 @@
 
   ## Link
   
-  [Click Here](https://dynamic-portfolio-ten.vercel.app/) to go to the repo link.
+  [Click Here](https://dynamicportfolio.herokuapp.com/) to go to the repo link.
   
 
 
