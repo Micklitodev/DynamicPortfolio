@@ -6,11 +6,6 @@ const userdata = [
     email: "Ftank@gmail.com",
     password: "password",
   },
-  {
-    user_name: "JimBob",
-    email: "jBob@gmail.com",
-    password: "password",
-  },
 ];
 
 const userSeeds = () => User.bulkCreate(userdata);
