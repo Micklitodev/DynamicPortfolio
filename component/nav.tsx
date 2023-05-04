@@ -122,16 +122,16 @@ const Nav = (): JSX.Element => {
                     <a href="#contact">Contact</a>
                   </li>
                 </ScrollReveal.div>
-                {userLogState == "false" ? (
+                {userLogState == "true" ? (
                   <ScrollReveal.div duration={7}>
                     <li className="text-gray-600 hover:text-purple-300">
-                      <a href="/login">Log In</a>
+                      <a onClick={logoutClick}>Log Out</a>
                     </li>
                   </ScrollReveal.div>
                 ) : (
                   <ScrollReveal.div duration={7}>
                     <li className="text-gray-600 hover:text-purple-300">
-                      <a onClick={logoutClick}>Log Out</a>
+                      <a href="/login">Log In</a>
                     </li>
                   </ScrollReveal.div>
                 )}
