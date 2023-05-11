@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
-import { ScrollReveal } from "reveal-on-scroll-react";
-
 const Contact = (): JSX.Element => {
   const sendMail = async (mail: any) => {
     try {
@@ -45,54 +43,53 @@ const Contact = (): JSX.Element => {
 
   return (
     <>
-      <ScrollReveal.div>
-        <h2 id="contact" className={styles.componenth2}>
-          Contact Me
-        </h2>
-        <section className={styles.contact}>
-          <div>
-            <a href="https://github.com/Micklitodev">
-              <Image
-                className={styles.favicon}
-                src="/contact/githubfavicon.png"
-                alt="github link"
-                width={30}
-                height={30}
-              />
-            </a>
-          </div>
+      <h2 id="contact" className={styles.componenth2}>
+        Contact Me
+      </h2>
+      <section className={styles.contact}>
+        <div>
+          <a href="https://github.com/Micklitodev">
+            <Image
+              className={styles.favicon}
+              src="/contact/githubfavicon.png"
+              alt="github link"
+              width={30}
+              height={30}
+            />
+          </a>
+        </div>
 
-          <div>
-            <a href="tel:4708314159">
-              <Image
-                className={styles.favicon}
-                src="/contact/phonefavicon.png"
-                alt="phone link"
-                width={30}
-                height={30}
-              />
-            </a>
-          </div>
+        <div>
+          <a href="tel:4708314159">
+            <Image
+              className={styles.favicon}
+              src="/contact/phonefavicon.png"
+              alt="phone link"
+              width={30}
+              height={30}
+            />
+          </a>
+        </div>
 
-          <div>
-            <a href="mailto: micklito.dev@gmail.com">
-              <Image
-                className={styles.favicon}
-                src="/contact/emailfavicon.png"
-                alt="email link"
-                width={30}
-                height={30}
-              />
-            </a>
-          </div>
-          <div className={styles.formEl} id="contactForm">
-            <div className="mb-32 text-center text-gray-800">
-              <div className="mx-auto px-3 lg:px-6">
-                <form>
-                  <div className="form-group mb-6">
-                    <input
-                      type="text"
-                      className="form-control block
+        <div>
+          <a href="mailto: micklito.dev@gmail.com">
+            <Image
+              className={styles.favicon}
+              src="/contact/emailfavicon.png"
+              alt="email link"
+              width={30}
+              height={30}
+            />
+          </a>
+        </div>
+        <div className={styles.formEl} id="contactForm">
+          <div className="mb-32 text-center text-gray-800">
+            <div className="mx-auto px-3 lg:px-6">
+              <form>
+                <div className="form-group mb-6">
+                  <input
+                    type="text"
+                    className="form-control block
                         w-full
                         px-3
                         py-1.5  
@@ -107,15 +104,15 @@ const Contact = (): JSX.Element => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
                         "
-                      id="name-input"
-                      placeholder="Name"
-                    />
-                  </div>
+                    id="name-input"
+                    placeholder="Name"
+                  />
+                </div>
 
-                  <div className="form-group mb-6">
-                    <input
-                      type="email"
-                      className="form-control block
+                <div className="form-group mb-6">
+                  <input
+                    type="email"
+                    className="form-control block
                         w-full
                         px-3
                         py-1.5
@@ -130,14 +127,14 @@ const Contact = (): JSX.Element => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
                           "
-                      id="email-input"
-                      placeholder="Email address"
-                    />
-                  </div>
+                    id="email-input"
+                    placeholder="Email address"
+                  />
+                </div>
 
-                  <div className="form-group mb-6">
-                    <textarea
-                      className="
+                <div className="form-group mb-6">
+                  <textarea
+                    className="
                         form-control
                         block
                         w-full
@@ -154,14 +151,14 @@ const Contact = (): JSX.Element => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
                       "
-                      id="message-input"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
+                    id="message-input"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
 
-                  <button
-                    onClick={handleClick}
-                    className="
+                <button
+                  onClick={handleClick}
+                  className="
                       w-full
                       px-6
                       py-2.5
@@ -180,15 +177,14 @@ const Contact = (): JSX.Element => {
                       duration-150
                       ease-in-out
                       "
-                  >
-                    Send
-                  </button>
-                </form>
-              </div>
+                >
+                  Send
+                </button>
+              </form>
             </div>
           </div>
-        </section>
-      </ScrollReveal.div>
+        </div>
+      </section>
     </>
   );
 };

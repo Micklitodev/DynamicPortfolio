@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Cloud from "../component/cloudhead";
 import AboutMe from "../component/aboutme";
+import Downloadbtn from "@/component/downloadbtn";
 import Projects from "../component/projects";
 import Nav from "../component/nav";
 import CertSlideShow from "../component/certificates";
@@ -30,29 +31,36 @@ const Home = (): JSX.Element => {
       <br />
       <br />
       <main>
-        <Cloud />
-        <Sidebar />
-        <ScrollReveal.div animation="slide-in-bottom" duration={2}>
+        <ScrollReveal.div animation="fade-in" duration={4}>
+          <Cloud />
+        </ScrollReveal.div>
+        <ScrollReveal.div animation="fade-in" duration={3}>
+          <Sidebar />
+        </ScrollReveal.div>
+        <ScrollReveal.div animation="fade-in" duration={2}>
           <AboutMe />
         </ScrollReveal.div>
+        <ScrollReveal.div duration={4}>
+          <Downloadbtn />
+        </ScrollReveal.div>
         <br />
-        <ScrollReveal.div animation="slide-in-right">
+        <ScrollReveal.div animation="fade-in" duration={1.5}>
           <Skills />
         </ScrollReveal.div>
         <br />
-        <ScrollReveal.div animation="slide-in-left">
+        <ScrollReveal.div animation="fade-in" duration={1.5}>
           <Projects />
         </ScrollReveal.div>
         <br />
-        <ScrollReveal.div animation="slide-in-right">
+        <ScrollReveal.div animation="fade-in" duration={1.5}>
           <CertSlideShow />
         </ScrollReveal.div>
         <br />
-        <ScrollReveal.div>
+        <ScrollReveal.div animation="fade-in" duration={1.5}>
           <Reviews />
         </ScrollReveal.div>
         <br />
-        <ScrollReveal.div animation="slide-in-left">
+        <ScrollReveal.div animation="fade-in" duration={1.5}>
           <Contact />
         </ScrollReveal.div>
       </main>
