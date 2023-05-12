@@ -5,6 +5,7 @@ import Link from "next/link";
 const Nav = (): JSX.Element => {
   const [navbar, setNavbar] = useState<boolean>(false);
   const [userLogState, setUserLogState] = useState<any>(false);
+  const [navShade, setNavShade] = useState<string>("w-full bg-gray-50");
 
   function logoutClick() {
     const fetchData = async () => {
@@ -31,15 +32,23 @@ const Nav = (): JSX.Element => {
     fetchData();
   }
 
+  const handleScrollEvt = () => {
+    setNavShade("w-full bg-gray-50 shadow-[0_1px_10px_rgba(166,166,166,1)]");
+  };
+
   useEffect(() => {
     const sesslog = sessionStorage.getItem("logstate");
     setUserLogState(sesslog);
   }, []);
 
+  useEffect(() => {
+    document.addEventListener("scroll", handleScrollEvt);
+  }, []);
+
   return (
     <>
       <nav
-        className="w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 shadow"
+        className={navShade}
         style={{ position: "fixed", top: 0, zIndex: 2 }}
       >
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -91,44 +100,44 @@ const Nav = (): JSX.Element => {
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <ScrollReveal.div duration={1}>
-                  <li className="text-gray-600 hover:text-blue-300">
+                  <li className="text-gray-600 hover:text-gray-400">
                     <Link href="#about-me">About Me</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={2}>
-                  <li className="text-gray-600 hover:text-pink-300">
+                  <li className="text-gray-600 hover:text-gray-400">
                     <Link href="#skills">Skills</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={3}>
-                  <li className="text-gray-600 hover:text-purple-300">
+                  <li className="text-gray-600 hover:text-gray-400">
                     <Link href="#projects">Projects</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={4}>
-                  <li className="text-gray-600 hover:text-blue-300">
+                  <li className="text-gray-600 hover:text-gray-400">
                     <Link href="#certs">Certfications</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={5}>
-                  <li className="text-gray-600 hover:text-pink-300">
+                  <li className="text-gray-600 hover:text-gray-400">
                     <Link href="#reviews">Reviews</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={6}>
-                  <li className="text-gray-600 hover:text-purple-300">
+                  <li className="text-gray-600 hover:text-gray-400">
                     <Link href="#contact">Contact</Link>
                   </li>
                 </ScrollReveal.div>
                 {userLogState == "true" ? (
                   <ScrollReveal.div duration={7}>
-                    <li className="text-gray-600 hover:text-purple-300">
+                    <li className="text-gray-600 hover:text-gray-400">
                       <button onClick={logoutClick}>Log Out</button>
                     </li>
                   </ScrollReveal.div>
                 ) : (
                   <ScrollReveal.div duration={7}>
-                    <li className="text-gray-600 hover:text-purple-300">
+                    <li className="text-gray-600 hover:text-gray-400">
                       <Link href="/login">Log In</Link>
                     </li>
                   </ScrollReveal.div>

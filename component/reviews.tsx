@@ -92,7 +92,7 @@ const Reviews = (): JSX.Element => {
                     w-full
                     px-6
                     py-2.5
-                    bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200
+                    bg-gray-50
                     text-gray-700
                     font-medium
                     text-xs

@@ -12,7 +12,7 @@ const Downloadbtn = (): JSX.Element => {
 
   const core: colorStyle = {
     filter:
-      "invert(80%) sepia(80%) saturate(1152%) hue-rotate(87deg) brightness(120%) contrast(129%)",
+      "invert(1000%) sepia(40%) saturate(1152%) hue-rotate(87deg) brightness(120%) contrast(129%)",
   };
 
   function handleClick() {

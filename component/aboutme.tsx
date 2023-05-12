@@ -11,7 +11,7 @@ const AboutMe = (): JSX.Element => {
         <div>
           <Image
             className="pfp"
-            src="/aboutme/pfp.png"
+            src="/aboutme/0-1.png"
             alt="Profile Picture"
             width={150}
             height={150}

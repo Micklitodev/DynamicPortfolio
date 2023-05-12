@@ -47,7 +47,7 @@ const Signup = (): JSX.Element => {
   return (
     <>
       <nav
-        className="w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 shadow"
+        className="w-full bg-grey-50 shadow"
         style={{ position: "fixed", top: 0, zIndex: 2 }}
       >
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
