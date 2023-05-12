@@ -31,8 +31,9 @@
   position: fixed;
   top: 30vh;
   left: 10px;
-  background-color: rgb(220, 244, 255);
-  border: 1px solid  rgb(255, 255, 255);
+  background-color: rgb(220, 244, 255);  
+  box-shadow: 0px 1px 10px rgb(166, 166, 166);
+
   padding: 2px;
   border-radius: 20px;
   z-index: 2;
@@ -199,6 +200,21 @@
   margin-left: 2px;
   max-height: 15px;
   display: inline-block;
+}
+
+.footer {
+  background-color: rgb(252, 252, 252);
+  width: 100vw; 
+  position: fixed; 
+  bottom: 0;
+  height: 20px; 
+  box-shadow: 0px 1px 10px rgb(166, 166, 166);
+  z-index: 2;
+}
+.footer p {
+  text-align: center;
+  font-size: xx-small;
+  margin-top: 2px;
 }
 
 @media screen and (max-width: 893px) {

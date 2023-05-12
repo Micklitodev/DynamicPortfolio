@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import Cloud from "../component/cloudhead";
 import AboutMe from "../component/aboutme";
 import Downloadbtn from "@/component/downloadbtn";
@@ -10,6 +9,7 @@ import CertSlideShow from "../component/certificates";
 import Contact from "../component/contact";
 import Skills from "../component/skills";
 import Reviews from "../component/reviews";
+import Footer from "../component/footer";
 
 import { ScrollReveal } from "reveal-on-scroll-react";
 import Sidebar from "../component/sidebar";
@@ -63,6 +63,8 @@ const Home = (): JSX.Element => {
         <ScrollReveal.div animation="fade-in" duration={1.5}>
           <Contact />
         </ScrollReveal.div>
+        <br />
+        <Footer />
       </main>
     </>
   );
