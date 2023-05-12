@@ -1,6 +1,7 @@
 import styles from "@/styles/signup.module.css";
 import { useState } from "react";
 import { ScrollReveal } from "reveal-on-scroll-react";
+import Link from "next/link";
 
 const Signup = (): JSX.Element => {
   const [navbar, setNavbar] = useState<boolean>(false);
@@ -102,7 +103,7 @@ const Signup = (): JSX.Element => {
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <ScrollReveal.div duration={1}>
                   <li className="text-gray-600 hover:text-blue-300">
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                 </ScrollReveal.div>
               </ul>
@@ -188,9 +189,9 @@ const Signup = (): JSX.Element => {
             <br />
             <p>Already Have a Profile?</p>
             <br />
-            <a className={styles.loginlink} href="/login">
+            <Link className={styles.loginlink} href="/login">
               Log in!
-            </a>
+            </Link>
           </div>
         </div>
       </div>

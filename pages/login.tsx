@@ -1,8 +1,9 @@
 import styles from "@/styles/login.module.css";
 import { useState } from "react";
 import { ScrollReveal } from "reveal-on-scroll-react";
+import Link from "next/link";
 
-const Login = () => {
+const Login = (): JSX.Element => {
   const [navbar, setNavbar] = useState<boolean>(false);
 
   function handleClick() {
@@ -99,7 +100,7 @@ const Login = () => {
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <ScrollReveal.div duration={1}>
                   <li className="text-gray-600 hover:text-blue-300">
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                 </ScrollReveal.div>
               </ul>
@@ -169,9 +170,9 @@ const Login = () => {
           <br />
           <p>Dont have an profile?</p>
           <br />
-          <a className={styles.signuplink} href="/signup">
+          <Link className={styles.signuplink} href="/signup">
             Sign Up!
-          </a>
+          </Link>
         </div>
       </div>
     </>

@@ -10,7 +10,6 @@ import Contact from "../component/contact";
 import Skills from "../component/skills";
 import Reviews from "../component/reviews";
 import Footer from "../component/footer";
-
 import { ScrollReveal } from "reveal-on-scroll-react";
 import Sidebar from "../component/sidebar";
 import configureSession from "../middleware/session";

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 const Contact = (): JSX.Element => {
   const sendMail = async (mail: any) => {
@@ -48,7 +49,7 @@ const Contact = (): JSX.Element => {
       </h2>
       <section className={styles.contact}>
         <div>
-          <a href="https://github.com/Micklitodev">
+          <Link href="https://github.com/Micklitodev" target="_blank">
             <Image
               className={styles.favicon}
               src="/contact/githubfavicon.png"
@@ -56,11 +57,11 @@ const Contact = (): JSX.Element => {
               width={30}
               height={30}
             />
-          </a>
+          </Link>
         </div>
 
         <div>
-          <a href="tel:4708314159">
+          <Link href="tel:4708314159">
             <Image
               className={styles.favicon}
               src="/contact/phonefavicon.png"
@@ -68,11 +69,11 @@ const Contact = (): JSX.Element => {
               width={30}
               height={30}
             />
-          </a>
+          </Link>
         </div>
 
         <div>
-          <a href="mailto: micklito.dev@gmail.com">
+          <Link href="mailto: micklito.dev@gmail.com">
             <Image
               className={styles.favicon}
               src="/contact/emailfavicon.png"
@@ -80,7 +81,7 @@ const Contact = (): JSX.Element => {
               width={30}
               height={30}
             />
-          </a>
+          </Link>
         </div>
         <div className={styles.formEl} id="contactForm">
           <div className="mb-32 text-center text-gray-800">

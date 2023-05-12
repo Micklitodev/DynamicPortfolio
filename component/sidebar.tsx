@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { ScrollReveal } from "reveal-on-scroll-react";
+import Link from "next/link";
 
 const Sidebar = (): JSX.Element => {
   return (
@@ -9,7 +10,7 @@ const Sidebar = (): JSX.Element => {
         <ul>
           <ScrollReveal.div duration={1}>
             <li>
-              <a href="/">
+              <Link href="/">
                 <Image
                   className={styles.sidebar}
                   src="/contact/home.png"
@@ -17,13 +18,13 @@ const Sidebar = (): JSX.Element => {
                   width={25}
                   height={25}
                 />
-              </a>
+              </Link>
             </li>
           </ScrollReveal.div>
           <br />
           <ScrollReveal.div duration={2}>
             <li>
-              <a href="https://github.com/Micklitodev">
+              <Link href="https://github.com/Micklitodev" target="_blank">
                 <Image
                   className={styles.sidebar}
                   src="/contact/githubfavicon.png"
@@ -31,12 +32,12 @@ const Sidebar = (): JSX.Element => {
                   width={25}
                   height={25}
                 />
-              </a>
+              </Link>
             </li>
           </ScrollReveal.div>
           <ScrollReveal.div duration={3}>
             <li>
-              <a href="tel:4708314159">
+              <Link href="tel:4708314159">
                 <Image
                   className={styles.sidebar}
                   src="/contact/phonefavicon.png"
@@ -44,12 +45,12 @@ const Sidebar = (): JSX.Element => {
                   width={25}
                   height={25}
                 />
-              </a>
+              </Link>
             </li>
           </ScrollReveal.div>
           <ScrollReveal.div duration={4}>
             <li>
-              <a href="mailto: micklito.dev@gmail.com">
+              <Link href="mailto: micklito.dev@gmail.com">
                 <Image
                   className={styles.sidebar}
                   src="/contact/emailfavicon.png"
@@ -57,7 +58,7 @@ const Sidebar = (): JSX.Element => {
                   width={25}
                   height={25}
                 />
-              </a>
+              </Link>
             </li>
           </ScrollReveal.div>
         </ul>

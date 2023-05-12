@@ -44,6 +44,7 @@ const Downloadbtn = (): JSX.Element => {
               priority
             />
           </a>
+          <p className={styles.dwnldtxt}> download resume </p>
         </div>
       </section>
     </>

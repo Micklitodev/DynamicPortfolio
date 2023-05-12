@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ScrollReveal } from "reveal-on-scroll-react";
+import Link from "next/link";
 
 const Nav = (): JSX.Element => {
   const [navbar, setNavbar] = useState<boolean>(false);
@@ -44,9 +45,6 @@ const Nav = (): JSX.Element => {
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <a href="#">
-                <h2 className="text-2xl font-bold"></h2>
-              </a>
               <div className="md:hidden">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -94,44 +92,44 @@ const Nav = (): JSX.Element => {
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <ScrollReveal.div duration={1}>
                   <li className="text-gray-600 hover:text-blue-300">
-                    <a href="#about-me">About Me</a>
+                    <Link href="#about-me">About Me</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={2}>
                   <li className="text-gray-600 hover:text-pink-300">
-                    <a href="#skills">Skills</a>
+                    <Link href="#skills">Skills</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={3}>
                   <li className="text-gray-600 hover:text-purple-300">
-                    <a href="#projects">Projects</a>
+                    <Link href="#projects">Projects</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={4}>
                   <li className="text-gray-600 hover:text-blue-300">
-                    <a href="#certs">Certfications</a>
+                    <Link href="#certs">Certfications</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={5}>
                   <li className="text-gray-600 hover:text-pink-300">
-                    <a href="#reviews">Reviews</a>
+                    <Link href="#reviews">Reviews</Link>
                   </li>
                 </ScrollReveal.div>
                 <ScrollReveal.div duration={6}>
                   <li className="text-gray-600 hover:text-purple-300">
-                    <a href="#contact">Contact</a>
+                    <Link href="#contact">Contact</Link>
                   </li>
                 </ScrollReveal.div>
                 {userLogState == "true" ? (
                   <ScrollReveal.div duration={7}>
                     <li className="text-gray-600 hover:text-purple-300">
-                      <a onClick={logoutClick}>Log Out</a>
+                      <button onClick={logoutClick}>Log Out</button>
                     </li>
                   </ScrollReveal.div>
                 ) : (
                   <ScrollReveal.div duration={7}>
                     <li className="text-gray-600 hover:text-purple-300">
-                      <a href="/login">Log In</a>
+                      <Link href="/login">Log In</Link>
                     </li>
                   </ScrollReveal.div>
                 )}
