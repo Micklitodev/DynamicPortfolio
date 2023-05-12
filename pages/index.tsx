@@ -30,14 +30,12 @@ const Home = (): JSX.Element => {
       <br />
       <br />
       <main>
-        <ScrollReveal.div animation="fade-in" duration={4}>
-          <Cloud />
-        </ScrollReveal.div>
         <ScrollReveal.div animation="fade-in" duration={3}>
           <Sidebar />
         </ScrollReveal.div>
         <ScrollReveal.div animation="fade-in" duration={2}>
-          <AboutMe />
+        <Cloud />
+        <AboutMe />
         </ScrollReveal.div>
         <ScrollReveal.div duration={4}>
           <Downloadbtn />
