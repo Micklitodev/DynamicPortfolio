@@ -35,6 +35,7 @@
     "react-type-animation": "^3.0.1",
     "reveal-on-scroll-react": "^0.0.6",
     "sequelize": "^6.31.0",
+    "sharp": "^0.32.1",
     "swiper": "^9.2.4",
     "typescript": "4.9.5",
     "yarn": "^1.22.19"
