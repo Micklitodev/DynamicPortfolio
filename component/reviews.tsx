@@ -8,36 +8,36 @@ const Reviews = (): JSX.Element => {
   const [reviews, setReviews] = useState<[object]>([
     {
       id: 0,
-      rating: 0,
-      content: "",
-      user_name: "",
+      rating: 5,
+      content: "Michael is awesome to work with!",
+      user_name: "testreview",
     },
   ]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/getreviews", {
-          method: "GET",
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-        });
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("/api/getreviews", {
+  //         method: "GET",
+  //         headers: {
+  //           Accept: "application/json, text/plain, */*",
+  //           "Content-Type": "application/json",
+  //         },
+  //       });
 
-        if (response.ok) {
-          const data = await response.json();
-          setReviews(data.RevArr);
-        } else {
-          console.error("Failed to fetch reviews");
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  //       if (response.ok) {
+  //         const data = await response.json();
+  //         setReviews(data.RevArr);
+  //       } else {
+  //         console.error("Failed to fetch reviews");
+  //       }
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const windowStyle: object = {
     backgroundRepeat: "no-repeat",

@@ -2,15 +2,12 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import AboutMe from "../component/aboutme";
 import Projects from "../component/projects";
-import Nav from "../component/nav";
 import CertSlideShow from "../component/certificates";
 import Contact from "../component/contact";
 import Skills from "../component/skills";
 import Reviews from "../component/reviews";
 import Footer from "../component/footer";
-import { ScrollReveal } from "reveal-on-scroll-react";
 import Sidebar from "../component/sidebar";
-import configureSession from "../middleware/session";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,19 +23,12 @@ const Home = (): JSX.Element => {
       {/* <Nav /> */}
       <main>
         <Sidebar />
-
         <AboutMe />
-
         <Skills />
-
         <Projects />
-
         <CertSlideShow />
-
         <Reviews />
-
         <Contact />
-
         <Footer />
       </main>
     </>
@@ -46,10 +36,3 @@ const Home = (): JSX.Element => {
 };
 
 export default Home;
-
-export const getServerSideProps = async (context: any) => {
-  await configureSession(context.req, context.res, () => {});
-  return {
-    props: {},
-  };
-};
