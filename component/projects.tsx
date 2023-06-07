@@ -24,6 +24,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   {" "}
@@ -51,6 +52,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Social Network API:
@@ -75,6 +77,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Note Server:
@@ -101,6 +104,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Astro-Atlas:
@@ -123,6 +127,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   JATE:
@@ -147,6 +152,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   CPU Observer:
@@ -173,6 +179,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Parkify:
@@ -199,6 +206,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Ecom-Backend:
@@ -223,6 +231,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Team Profile Generator:
@@ -250,6 +259,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   width={500}
                   height={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Dev-Blog:
@@ -274,6 +284,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Dynamic Portfolio:
@@ -301,6 +312,7 @@ const Projects = (): JSX.Element => {
                   alt=""
                   height={500}
                   width={500}
+                  priority
                 />
                 <div className="image-overlay">
                   Employee CMS:
