@@ -169,7 +169,7 @@ const Projects = (): JSX.Element => {
                 <Image
                   title="Test Image 7"
                   className="h-auto max-w-full rounded-lg"
-                  src="/projects/snowark.jpg"
+                  src="/projects/snowpark.png"
                   alt=""
                   height={500}
                   width={500}
@@ -195,7 +195,7 @@ const Projects = (): JSX.Element => {
                 <Image
                   title="Test Image 8"
                   className="h-auto max-w-full rounded-lg"
-                  src="/projects/ecomcart5.webp"
+                  src="/projects/ecomcart5.png"
                   alt=""
                   height={500}
                   width={500}
