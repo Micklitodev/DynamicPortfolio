@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import Cloud from "../component/cloudhead";
 import AboutMe from "../component/aboutme";
-import Downloadbtn from "@/component/downloadbtn";
 import Projects from "../component/projects";
 import Nav from "../component/nav";
 import CertSlideShow from "../component/certificates";
@@ -25,42 +23,22 @@ const Home = (): JSX.Element => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <br />
-      <br />
-      <br />
+      {/* <Nav /> */}
       <main>
-        <ScrollReveal.div animation="fade-in" duration={3}>
-          <Sidebar />
-        </ScrollReveal.div>
-        <ScrollReveal.div animation="fade-in" duration={2}>
-        <Cloud />
+        <Sidebar />
+
         <AboutMe />
-        </ScrollReveal.div>
-        <ScrollReveal.div duration={4}>
-          <Downloadbtn />
-        </ScrollReveal.div>
-        <br />
-        <ScrollReveal.div animation="fade-in" duration={1.5}>
-          <Skills />
-        </ScrollReveal.div>
-        <br />
-        <ScrollReveal.div animation="fade-in" duration={1.5}>
-          <Projects />
-        </ScrollReveal.div>
-        <br />
-        <ScrollReveal.div animation="fade-in" duration={1.5}>
-          <CertSlideShow />
-        </ScrollReveal.div>
-        <br />
-        <ScrollReveal.div animation="fade-in" duration={1.5}>
-          <Reviews />
-        </ScrollReveal.div>
-        <br />
-        <ScrollReveal.div animation="fade-in" duration={1.5}>
-          <Contact />
-        </ScrollReveal.div>
-        <br />
+
+        <Skills />
+
+        <Projects />
+
+        <CertSlideShow />
+
+        <Reviews />
+
+        <Contact />
+
         <Footer />
       </main>
     </>

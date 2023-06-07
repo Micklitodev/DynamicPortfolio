@@ -3,16 +3,27 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import styles from "@/styles/Home.module.css";
 
-type stylediv = {
-  display: string;
-  alignItems: string;
-  justifyContent: string;
-  borderRadius: number;
-  maxHeight: number;
-  maxWidth: number;
-  backgroundSize: string;
-  backgroundPosition: string;
-  margin: string;
+const spanStyle: object = {
+  padding: 8,
+  borderRadius: 5,
+  background: "rgb(39 39 42)",
+  color: "rgb(209 213 219)",
+  position: "absolute",
+  top: 30,
+  fontSize: 14,
+};
+
+const divStyle: object = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "10px",
+  maxHeight: 450,
+  maxWidth: 570,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  overflow: "hidden",
+  margin: "0 auto",
 };
 
 type slideobj = [
@@ -50,28 +61,6 @@ type slideobj = [
   }
 ];
 
-const spanStyle: object = {
-  padding: 8,
-  borderRadius: 5,
-  background: "rgb(39 39 42)",
-  color: "rgb(209 213 219)",
-  position: "absolute",
-  top: 30,
-  fontSize: 14,
-};
-
-const divStyle: stylediv = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: 10,
-  maxHeight: 450,
-  maxWidth: 570,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  margin: "0 auto",
-};
-
 const slideImages: slideobj = [
   {
     url: "/certs/html.png",
@@ -107,31 +96,89 @@ const slideImages: slideobj = [
   },
 ];
 
+const arrowStyle: object = {
+  position: "absolute",
+  top: "50%",
+  transform: "translateY(-50%)",
+  width: "40px",
+  height: "40px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  color: "rgba(240, 240, 240, 0.8)",
+  fontSize: "35px",
+  cursor: "pointer",
+  marginLeft: "20%",
+  marginRight: "20%",
+};
+
+const windowStyle: object = {
+  backgroundColor: `rgba(35, 35, 37, 1)`,
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+};
+
 const CertSlideShow = (): JSX.Element => {
+  const arrowOffset = "10px";
+
   return (
     <>
-      <div id="certs">
-        <br />
-        <h2 className={styles.componenth2}>My Certifications</h2>
-        <Slide>
-          {slideImages.map((slideImage, index: number) => (
-            <div key={index}>
+      <div
+        style={{
+          ...windowStyle,
+        }}
+        className="h-screen"
+      >
+        <div id="certs">
+          <br />
+          <h2 className={styles.componenth2darkbg}>My Certifications</h2>
+          <br />
+          <Slide
+            prevArrow={
               <div
                 style={{
-                  ...divStyle,
-                  backgroundImage: `url(${slideImage.url})`,
+                  ...arrowStyle,
+                  left: `calc(${arrowOffset} - 20px)`,
                 }}
               >
-                <span style={spanStyle}>{slideImage.caption}</span>
-                <img
-                  src={slideImage.url}
-                  alt={slideImage.caption}
-                  style={{ width: "100%", height: "auto" }}
-                />
+                {"<"}
               </div>
-            </div>
-          ))}
-        </Slide>
+            }
+            nextArrow={
+              <div
+                style={{
+                  ...arrowStyle,
+                  right: `calc(${arrowOffset} - 20px)`,
+                }}
+              >
+                {">"}
+              </div>
+            }
+          >
+            {slideImages.map((slideImage, index: number) => (
+              <div key={index}>
+                <div
+                  style={{
+                    ...divStyle,
+                    backgroundImage: `url(${slideImage.url})`,
+                  }}
+                >
+                  <span style={spanStyle}>{slideImage.caption}</span>
+                  <img
+                    src={slideImage.url}
+                    alt={slideImage.caption}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "20px",
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </Slide>
+        </div>
       </div>
     </>
   );

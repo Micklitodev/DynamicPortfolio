@@ -16,13 +16,8 @@
   max-width: 800px;
 }
 
-.cloud {
-  position: fixed;
-  width: 100%;
-  z-index: -2;
-  top: 10;
-  left: 30px;
-  opacity: 0.7;
+.projectcontainer {
+  padding: 5%;
 }
 
 .sidebarContainer {
@@ -114,39 +109,23 @@
   padding: 5px;
   margin-top: 50px;
   font-size: 20px;
+  color: rgb(45, 45, 45);
 }
 
-.downloadbtn {
-  position: absolute;
-  top: 580px;
-  left: 49%;
-}
-
-.dwnldtxt {
-  font-size: 9px;
+.componenth2darkbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  top: -30px;
-}
-
-.projects {
-  max-width: 660px;
-}
-
-.imgtag {
-  position: absolute;
-  top: 41px;
-  font-size: 12px;
-  border: 1px solid grey;
-  background-color: grey;
-  width: 70px;
-  padding: 2px;
-  border-radius: 7px;
-  color: rgb(220, 244, 255);
+  padding: 5px;
+  margin-top: 50px;
+  font-size: 20px;
+  color: rgb(210, 219, 208);
 }
 
 .favicon {
-  border-radius: 15px;
   margin-left: 15px;
+  color: rgb(181, 181, 181);
 }
 
 .contact {
@@ -171,43 +150,54 @@
   margin-top: 10px;
 }
 
-.linkprops {
-  position: relative;
-  z-index: 1;
+.skillsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* color: rgb(50, 50, 50); */
+  color: rgb(252, 252, 252);
+}
+.barfillcolor {
+  /* background: rgba(40, 224, 187, 0.245); */
+  background-color: rgba(20, 20, 20, 0.896);
 }
 
 .skilltag {
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
-.frontend {
-  display: grid;
-  place-items: center;
-  margin-bottom: 30px;
-  margin-top: 20px;
-  padding: 5px;
-}
-
+.frontend,
 .backend {
   display: grid;
   place-items: center;
   padding: 5px;
 }
 
+.frontend h2,
+.backend h2 {
+  padding: 5px;
+  text-decoration: underline;
+}
+
 .reviewcard {
   margin-bottom: 10px;
   max-width: 350px;
+  border-radius: 10px;
+  background-color: rgb(28, 28, 28);
+  box-shadow: 1px 2px 8px rgb(61, 61, 61);
 }
 
 .staricon {
-  color: rgb(93, 93, 93);
+  /* color: rgb(93, 93, 93); */
+  color: rgb(72, 81, 78);
   margin-left: 2px;
   max-height: 15px;
   display: inline-block;
 }
 
 .footer {
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(239, 239, 239);
   width: 100vw;
   position: fixed;
   bottom: 0;

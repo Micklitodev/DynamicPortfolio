@@ -1,6 +1,7 @@
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+
+import { BsGithub, BsTelephone, BsEnvelope } from "react-icons/bs";
 
 const Contact = (): JSX.Element => {
   const sendMail = async (mail: any) => {
@@ -42,55 +43,49 @@ const Contact = (): JSX.Element => {
     }
   }
 
+  const windowStyle: object = {
+    backgroundColor: `rgba(35, 35, 37, 1)`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
   return (
     <>
-      <h2 id="contact" className={styles.componenth2}>
-        Contact Me
-      </h2>
-      <section className={styles.contact}>
-        <div>
-          <Link href="https://github.com/Micklitodev" target="_blank">
-            <Image
-              className={styles.favicon}
-              src="/contact/githubfavicon.png"
-              alt="github link"
-              width={30}
-              height={30}
-            />
-          </Link>
-        </div>
+      <div
+        style={{
+          ...windowStyle,
+        }}
+        className="h-screen"
+      >
+        <h2 id="contact" className={styles.componenth2darkbg}>
+          Contact Me
+        </h2>
+        <section className={styles.contact}>
+          <div>
+            <Link href="https://github.com/Micklitodev" target="_blank">
+              <BsGithub className={styles.favicon} size={30} />
+            </Link>
+          </div>
 
-        <div>
-          <Link href="tel:4708314159">
-            <Image
-              className={styles.favicon}
-              src="/contact/phonefavicon.png"
-              alt="phone link"
-              width={30}
-              height={30}
-            />
-          </Link>
-        </div>
+          <div>
+            <Link href="tel:4708314159">
+              <BsTelephone className={styles.favicon} size={30} />
+            </Link>
+          </div>
 
-        <div>
-          <Link href="mailto: micklito.dev@gmail.com">
-            <Image
-              className={styles.favicon}
-              src="/contact/emailfavicon.png"
-              alt="email link"
-              width={30}
-              height={30}
-            />
-          </Link>
-        </div>
-        <div className={styles.formEl} id="contactForm">
-          <div className="mb-32 text-center text-gray-800">
-            <div className="mx-auto px-3 lg:px-6">
-              <form>
-                <div className="form-group mb-6">
-                  <input
-                    type="text"
-                    className="form-control block
+          <div>
+            <Link href="mailto: micklito.dev@gmail.com">
+              <BsEnvelope className={styles.favicon} size={30} />
+            </Link>
+          </div>
+          <div className={styles.formEl} id="contactForm">
+            <div className="mb-32 text-center text-gray-800">
+              <div className="mx-auto px-3 lg:px-6">
+                <form>
+                  <div className="form-group mb-6">
+                    <input
+                      type="text"
+                      className="form-control block
                         w-full
                         px-3
                         py-1.5  
@@ -105,15 +100,15 @@ const Contact = (): JSX.Element => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
                         "
-                    id="name-input"
-                    placeholder="Name"
-                  />
-                </div>
+                      id="name-input"
+                      placeholder="Name"
+                    />
+                  </div>
 
-                <div className="form-group mb-6">
-                  <input
-                    type="email"
-                    className="form-control block
+                  <div className="form-group mb-6">
+                    <input
+                      type="email"
+                      className="form-control block
                         w-full
                         px-3
                         py-1.5
@@ -128,14 +123,14 @@ const Contact = (): JSX.Element => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
                           "
-                    id="email-input"
-                    placeholder="Email address"
-                  />
-                </div>
+                      id="email-input"
+                      placeholder="Email address"
+                    />
+                  </div>
 
-                <div className="form-group mb-6">
-                  <textarea
-                    className="
+                  <div className="form-group mb-6">
+                    <textarea
+                      className="
                         form-control
                         block
                         w-full
@@ -152,40 +147,43 @@ const Contact = (): JSX.Element => {
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
                       "
-                    id="message-input"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
+                      id="message-input"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
 
-                <button
-                  onClick={handleClick}
-                  className="
-                      w-full
-                      px-6
-                      py-2.5
-                      bg-gray-50
-                      text-gray-700
-                      font-medium
-                      text-xs
-                      leading-tight
-                      uppercase
-                      rounded
-                      shadow-md
-                      hover: hover:shadow-lg
-                      focus: focus:shadow-lg focus:outline-none focus:ring-0
-                      active: active:shadow-lg
-                      transition
-                      duration-150
-                      ease-in-out
-                      "
-                >
-                  Send
-                </button>
-              </form>
+                  <button
+                    onClick={handleClick}
+                    className={`
+                    w-full
+                    px-6
+                    py-2.5
+                    bg-stone-200
+                    text-zinc-800
+                    font-medium
+                    text-xs
+                    leading-tight
+                    uppercase
+                    rounded
+                    shadow-md
+                    hover:text-white
+                    hover:bg-black
+                    focus:outline-none
+                    focus:ring-0
+                    active:shadow-lg
+                    transition
+                    duration-150
+                    ease-in-out
+                  `}
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
