@@ -101,22 +101,22 @@ const Reviews = (): JSX.Element => {
               className={`
                        px-6
                        py-2.5
-                       bg-stone-200
-                       text-zinc-800
+                       tracking-wide 
+                       bg-zinc-800
+                       text-zinc-300
                        font-medium
-                       text-xs
-                       leading-tight
+                       text-sm
                        uppercase
                        rounded
                        shadow-md
                        hover:text-white
-                       hover:bg-black
+                       hover:bg-zinc-900
                        focus:outline-none
                        focus:ring-0
                        active:shadow-lg
                        transition
                        duration-150
-                       ease-in-out
+                       ease-in-out"
                      `}
             >
               Write a Review!

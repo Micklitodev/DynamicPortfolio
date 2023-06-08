@@ -1,17 +1,23 @@
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-
+import { useState } from "react";
 import { BsGithub, BsTelephone, BsEnvelope } from "react-icons/bs";
 
+interface FormData {
+  email: string;
+  name: string;
+  message: string;
+}
+
 const Contact = (): JSX.Element => {
-  const sendMail = async (mail: any) => {
+  const sendMail = async (mail: FormData) => {
     try {
       await fetch("https://joboffers-b3340-default-rtdb.firebaseio.com/.json", {
         method: "POST",
         body: JSON.stringify({
-          email: mail[1],
-          name: mail[0],
-          message: mail[2],
+          email: mail.email,
+          name: mail.name,
+          message: mail.message,
         }),
       });
     } catch (Error) {
@@ -19,29 +25,35 @@ const Contact = (): JSX.Element => {
     }
   };
 
-  function handleClick(evt: React.MouseEvent<HTMLElement>) {
-    evt.preventDefault();
-    const name = document.getElementById("name-input") as HTMLInputElement;
-    const email = document.getElementById("email-input") as HTMLInputElement;
-    const message = document.getElementById(
-      "message-input"
-    ) as HTMLTextAreaElement;
+  const [formData, setFormData] = useState<FormData>({
+    email: "",
+    name: "",
+    message: "",
+  });
 
-    let nameInput: string = name.value;
-    let emailInput: string = email.value;
-    let messageInput: string = message.value;
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-    if (!nameInput || !emailInput || !messageInput) {
-      alert("must complete all feilds");
-    } else {
-      const mail = [nameInput, emailInput, messageInput];
-      sendMail(mail);
-      let formEl: any = document.getElementById("contactForm") as HTMLElement;
-      formEl.innerHTML =
-        "Thank you! I will be in contact with you as soon as possible!";
-      formEl.style.cssText = "text-align: center; font-size: 18px;";
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    try {
+      sendMail(formData);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setFormData({
+        email: "",
+        name: "",
+        message: "",
+      });
+      window.location.href = "/#contact";
     }
-  }
+  };
 
   const windowStyle: object = {
     backgroundColor: `rgba(35, 35, 37, 1)`,
@@ -57,132 +69,119 @@ const Contact = (): JSX.Element => {
         }}
         className="h-screen"
       >
+        <br />
         <h2 id="contact" className={styles.componenth2darkbg}>
           Contact Me
         </h2>
-        <section className={styles.contact}>
-          <div>
-            <Link href="https://github.com/Micklitodev" target="_blank">
-              <BsGithub className={styles.favicon} size={30} />
-            </Link>
-          </div>
+        <br />
+        <br />
+        <div className="relative flex flex-col overflow-hidden">
+          <div className="w-full p-6 m-auto border rounded-md lg:max-w-xl mt-0">
+            <br />
+            <div className={styles.contact}>
+              <div>
+                <Link href="https://github.com/Micklitodev" target="_blank">
+                  <BsGithub className={styles.favicon} size={30} />
+                </Link>
+              </div>
 
-          <div>
-            <Link href="tel:4708314159">
-              <BsTelephone className={styles.favicon} size={30} />
-            </Link>
-          </div>
+              <div>
+                <Link href="tel:4708314159">
+                  <BsTelephone className={styles.favicon} size={30} />
+                </Link>
+              </div>
 
-          <div>
-            <Link href="mailto: micklito.dev@gmail.com">
-              <BsEnvelope className={styles.favicon} size={30} />
-            </Link>
-          </div>
-          <div className={styles.formEl} id="contactForm">
-            <div className="mb-32 text-center text-gray-800">
-              <div className="mx-auto px-3 lg:px-6">
-                <form>
-                  <div className="form-group mb-6">
-                    <input
-                      type="text"
-                      className="form-control block
-                        w-full
-                        px-3
-                        py-1.5  
-                        text-base
-                        font-normal
-                        text-gray-700
-                        bg-white bg-clip-padding
-                        border border-solid border-gray-300
-                        rounded
-                        transition
-                        ease-in-out
-                        m-0
-                        focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
-                        "
-                      id="name-input"
-                      placeholder="Name"
-                    />
-                  </div>
-
-                  <div className="form-group mb-6">
-                    <input
-                      type="email"
-                      className="form-control block
-                        w-full
-                        px-3
-                        py-1.5
-                        text-base
-                        font-normal
-                        text-gray-700
-                        bg-white bg-clip-padding
-                        border border-solid border-gray-300
-                        rounded
-                        transition
-                        ease-in-out
-                        m-0
-                        focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
-                          "
-                      id="email-input"
-                      placeholder="Email address"
-                    />
-                  </div>
-
-                  <div className="form-group mb-6">
-                    <textarea
-                      className="
-                        form-control
-                        block
-                        w-full
-                        px-3
-                        py-1.5
-                        text-base
-                        font-normal
-                        text-gray-700
-                        bg-white bg-clip-padding
-                        border border-solid border-gray-300
-                        rounded
-                        transition
-                        ease-in-out
-                        m-0
-                        focus:text-gray-700 focus:bg-white focus:border-green-400 focus:outline-none
-                      "
-                      id="message-input"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    onClick={handleClick}
-                    className={`
-                    w-full
-                    px-6
-                    py-2.5
-                    bg-stone-200
-                    text-zinc-800
-                    font-medium
-                    text-xs
-                    leading-tight
-                    uppercase
-                    rounded
-                    shadow-md
-                    hover:text-white
-                    hover:bg-black
-                    focus:outline-none
-                    focus:ring-0
-                    active:shadow-lg
-                    transition
-                    duration-150
-                    ease-in-out
-                  `}
-                  >
-                    Send
-                  </button>
-                </form>
+              <div>
+                <Link href="mailto: micklito.dev@gmail.com">
+                  <BsEnvelope className={styles.favicon} size={30} />
+                </Link>
               </div>
             </div>
+            <form onSubmit={handleSubmit} className="mt-8">
+              <div className="mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-zinc-500 text-center"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="Your Email Address"
+                  name="email"
+                  onChange={handleInputChange}
+                  value={formData.email}
+                  required
+                  className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div className="mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-zinc-500 text-center"
+                >
+                  Name
+                </label>
+                <input
+                  type="name"
+                  placeholder="Your Name"
+                  name="name"
+                  onChange={handleInputChange}
+                  value={formData.name}
+                  required
+                  className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div className="mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-zinc-500 text-center"
+                >
+                  Message
+                </label>
+                <input
+                  type="message"
+                  placeholder="Message"
+                  name="message"
+                  onChange={handleInputChange}
+                  value={formData.message}
+                  required
+                  className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div className="mt-6">
+                <button
+                  className="w-full 
+                  px-4 
+                  py-2 
+                  tracking-wide 
+                  bg-zinc-800
+                  text-zinc-100
+                  font-medium
+                  text-sm
+                  uppercase
+                  rounded
+                  shadow-md
+                  hover:text-white
+                  hover:bg-zinc-900
+                  focus:outline-none
+                  focus:ring-0
+                  active:shadow-lg
+                  transition
+                  duration-150
+                  ease-in-out"
+                  disabled={!formData.email}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
