@@ -10,6 +10,7 @@ interface FormData {
 }
 
 const Contact = (): JSX.Element => {
+  const [fromSubmitted, setFormSubmitted] = useState<boolean>(false);
   const sendMail = async (mail: FormData) => {
     try {
       await fetch("https://joboffers-b3340-default-rtdb.firebaseio.com/.json", {
@@ -22,6 +23,11 @@ const Contact = (): JSX.Element => {
       });
     } catch (Error) {
       console.log(Error);
+    } finally {
+      setFormSubmitted(true);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2500);
     }
   };
 
@@ -75,86 +81,96 @@ const Contact = (): JSX.Element => {
         </h2>
         <br />
         <br />
-        <div className="relative flex flex-col overflow-hidden">
-          <div className="w-full p-6 m-auto border rounded-md lg:max-w-xl mt-0">
-            <br />
-            <div className={styles.contact}>
-              <div>
-                <Link href="https://github.com/Micklitodev" target="_blank">
-                  <BsGithub className={styles.favicon} size={30} />
-                </Link>
-              </div>
+        {fromSubmitted ? (
+          <div>
+            <h2 className={styles.componenth2darkbg}>
+              <br />
+              <br />
+              Message Sent! Thank you for reaching out. I will be in contact
+              shortly!
+            </h2>
+          </div>
+        ) : (
+          <div className="relative flex flex-col overflow-hidden">
+            <div className="w-full p-6 m-auto border rounded-md lg:max-w-xl mt-0">
+              <br />
+              <div className={styles.contact}>
+                <div>
+                  <Link href="https://github.com/Micklitodev" target="_blank">
+                    <BsGithub className={styles.favicon} size={30} />
+                  </Link>
+                </div>
 
-              <div>
-                <Link href="tel:4708314159">
-                  <BsTelephone className={styles.favicon} size={30} />
-                </Link>
-              </div>
+                <div>
+                  <Link href="tel:4708314159">
+                    <BsTelephone className={styles.favicon} size={30} />
+                  </Link>
+                </div>
 
-              <div>
-                <Link href="mailto: micklito.dev@gmail.com">
-                  <BsEnvelope className={styles.favicon} size={30} />
-                </Link>
+                <div>
+                  <Link href="mailto: micklito.dev@gmail.com">
+                    <BsEnvelope className={styles.favicon} size={30} />
+                  </Link>
+                </div>
               </div>
-            </div>
-            <form onSubmit={handleSubmit} className="mt-8">
-              <div className="mb-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold text-zinc-500 text-center"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="Your Email Address"
-                  name="email"
-                  onChange={handleInputChange}
-                  value={formData.email}
-                  required
-                  className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
-                />
-              </div>
+              <form onSubmit={handleSubmit} className="mt-8">
+                <div className="mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold text-zinc-500 text-center"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Your Email Address"
+                    name="email"
+                    onChange={handleInputChange}
+                    value={formData.email}
+                    required
+                    className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
+                  />
+                </div>
 
-              <div className="mb-2">
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-semibold text-zinc-500 text-center"
-                >
-                  Name
-                </label>
-                <input
-                  type="name"
-                  placeholder="Your Name"
-                  name="name"
-                  onChange={handleInputChange}
-                  value={formData.name}
-                  required
-                  className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
-                />
-              </div>
+                <div className="mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-semibold text-zinc-500 text-center"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="name"
+                    placeholder="Your Name"
+                    name="name"
+                    onChange={handleInputChange}
+                    value={formData.name}
+                    required
+                    className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
+                  />
+                </div>
 
-              <div className="mb-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-zinc-500 text-center"
-                >
-                  Message
-                </label>
-                <input
-                  type="message"
-                  placeholder="Message"
-                  name="message"
-                  onChange={handleInputChange}
-                  value={formData.message}
-                  required
-                  className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
-                />
-              </div>
+                <div className="mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-zinc-500 text-center"
+                  >
+                    Message
+                  </label>
+                  <input
+                    type="message"
+                    placeholder="Message"
+                    name="message"
+                    onChange={handleInputChange}
+                    value={formData.message}
+                    required
+                    className="block bg-zinc-800 w-full px-4 py-2 mt-2 text-zinc-200 border rounded-md focus:border-zinc-600 focus:ring-zinc-700 focus:outline-none focus:ring focus:ring-opacity-40"
+                  />
+                </div>
 
-              <div className="mt-6">
-                <button
-                  className="w-full 
+                <div className="mt-6">
+                  <button
+                    className="w-full 
                   px-4 
                   py-2 
                   tracking-wide 
@@ -173,15 +189,16 @@ const Contact = (): JSX.Element => {
                   transition
                   duration-150
                   ease-in-out"
-                  disabled={!formData.email}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+                    disabled={!formData.email}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );
