@@ -54,7 +54,7 @@ const Reviews = (): JSX.Element => {
     >
       <section className={styles.main} id="reviews">
         <div>
-          <h2 className={styles.componenth2darkbg}> Reviews </h2>
+          <h2 className={styles.componenth2darkbg}> Reviews (currently down, Integrating to Graphql!) </h2>
           <br />
           <br />
         </div>
