@@ -28,7 +28,7 @@
 
   ## Screenshot
   
-  ![image](/public/dynamicportfolioss.png)
+  ![image](/public/dynamicportss.png.png)
   
 
   
