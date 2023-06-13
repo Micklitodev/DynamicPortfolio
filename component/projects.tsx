@@ -14,7 +14,7 @@ const Projects = (): JSX.Element => {
           <div className="grid gap-4">
             <div className="image-container">
               <Link
-                href="https://github.com/BJThompson12/projeCritter"
+                href="https://github.com/Micklitodev/projeCritter"
                 target="_blank"
               >
                 <Image
