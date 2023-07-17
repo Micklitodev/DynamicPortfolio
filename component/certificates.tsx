@@ -34,65 +34,17 @@ type slideobj = [
   {
     url: string;
     caption: string;
-  },
-  {
-    url: string;
-    caption: string;
-  },
-  {
-    url: string;
-    caption: string;
-  },
-  {
-    url: string;
-    caption: string;
-  },
-  {
-    url: string;
-    caption: string;
-  },
-  {
-    url: string;
-    caption: string;
-  },
-  {
-    url: string;
-    caption: string;
   }
 ];
 
 const slideImages: slideobj = [
   {
-    url: "/certs/html.png",
-    caption: "HTML",
-  },
-  {
-    url: "/certs/css.png",
-    caption: "CSS",
-  },
-  {
-    url: "/certs/js.png",
-    caption: "JAVASCRIPT",
+    url: "/certs/fsf.png",
+    caption: "Fullstack Flex",
   },
   {
     url: "/certs/typescript.png",
     caption: "TYPESCRIPT",
-  },
-  {
-    url: "/certs/react.png",
-    caption: "REACT",
-  },
-  {
-    url: "/certs/node.png",
-    caption: "NODE.JS",
-  },
-  {
-    url: "/certs/express.png",
-    caption: "EXPRESS",
-  },
-  {
-    url: "/certs/mongo.png",
-    caption: "MONGODB",
   },
 ];
 

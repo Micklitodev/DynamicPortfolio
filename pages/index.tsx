@@ -27,7 +27,7 @@ const Home = (): JSX.Element => {
         <Skills />
         <Projects />
         <CertSlideShow />
-        <Reviews />
+        {/* <Reviews /> */}
         <Contact />
         <Footer />
       </main>
