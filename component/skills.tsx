@@ -25,7 +25,7 @@ const Skills = (): JSX.Element => {
             <div className={styles.frontend}>
               <h2>Frontend</h2>
               <div>
-                <p className={styles.skilltag}>Next.js</p>
+                <p className={styles.skilltag}>Html</p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
                     className={`eighty h-full rounded-full ${styles.barfillcolor}`}
@@ -55,10 +55,10 @@ const Skills = (): JSX.Element => {
                     className={`ninety h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
-                <p className={styles.skilltag}> Html </p>
+                <p className={styles.skilltag}> Three.js </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`ninety h-full rounded-full ${styles.barfillcolor}`}
+                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const Skills = (): JSX.Element => {
                     className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
-                <p className={styles.skilltag}> OOP </p>
+                <p className={styles.skilltag}> Next.js </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
                     className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
