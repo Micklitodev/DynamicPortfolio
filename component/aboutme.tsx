@@ -8,7 +8,7 @@ type bgobj = {
 };
 
 const backgroundObj: bgobj = {
-  url: "/bgimg.jpg",
+  url: "/bgimg2.jpg",
 };
 
 const windowStyle: object = {

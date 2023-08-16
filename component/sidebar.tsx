@@ -27,7 +27,7 @@ const Sidebar = (): JSX.Element => {
           <div className="fixed w-full h-screen bg-white/80 flex flex-col justify-center items-center z-20">
             <Link
               onClick={handleNav}
-              href="#about-me"
+              href="/"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
               <BiHomeAlt2 size={20} />
@@ -45,7 +45,7 @@ const Sidebar = (): JSX.Element => {
 
             <Link
               onClick={handleNav}
-              href="#pojects"
+              href="/ProjectsPage"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
               <BiNetworkChart size={20} />
@@ -54,7 +54,16 @@ const Sidebar = (): JSX.Element => {
 
             <Link
               onClick={handleNav}
-              href="#contact"
+              href="/CertPage"
+              className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            >
+              <BiBookContent size={20} />
+              <span className="pl-4">Certs</span>
+            </Link>
+
+            <Link
+              onClick={handleNav}
+              href="/ContactPage"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
               <BiBookContent size={20} />
@@ -68,28 +77,65 @@ const Sidebar = (): JSX.Element => {
         <div className="md:block hidden fixed top-[25%] z-10">
           <div className="flex flex-col">
             <Link
-              href="#about-me"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              href="/"
+              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
-              <BiHomeAlt2 size={20} />
+              <div className="flex flex-col items-center">
+                <BiHomeAlt2
+                  style={{ color: "rgba(240, 240, 240, 0.75)" }}
+                  size={18}
+                />
+                <span style={{ fontSize: 10, color: "white" }}>Home</span>
+              </div>
             </Link>
             <Link
-              href="#skills"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+                     href="#skills"
+              style={{backdropFilter: 'blur(20px)'}}
+              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
-              <BiBarChartAlt2 size={20} />
+              <div className="flex flex-col items-center">
+                <BiBarChartAlt2
+                  style={{ color: "rgba(240, 240, 240, 0.75)" }}
+                  size={18}
+                />
+                <span style={{ fontSize: 10, color: "white" }}>Skills</span>
+              </div>
             </Link>
             <Link
               href="#projects"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
-              <BiNetworkChart size={20} />
+              <div className="flex flex-col items-center">
+                <BiNetworkChart
+                  style={{ color: "rgba(240, 240, 240, 0.75)" }}
+                  size={18}
+                />
+                <span style={{ fontSize: 10, color: "white" }}>Projects</span>
+              </div>
+            </Link>
+            <Link
+              href="#certs"
+              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
+              <div className="flex flex-col items-center">
+                <BiBookContent
+                  style={{ color: "rgba(240, 240, 240, 0.75)" }}
+                  size={18}
+                />
+                <span style={{ fontSize: 10, color: "white" }}>Certs</span>
+              </div>
             </Link>
             <Link
               href="#contact"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
-              <BiBookContent size={20} />
+              <div className="flex flex-col items-center">
+                <BiBookContent
+                  style={{ color: "rgba(240, 240, 240, 0.75)" }}
+                  size={18}
+                />
+                <span style={{ fontSize: 10, color: "white" }}>Contact</span>
+              </div>
             </Link>
           </div>
         </div>

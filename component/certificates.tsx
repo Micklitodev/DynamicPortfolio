@@ -65,7 +65,7 @@ const arrowStyle: object = {
 };
 
 const windowStyle: object = {
-  backgroundColor: `rgba(35, 35, 37, 1)`,
+  backgroundColor: "rgba(15, 15, 17, .8)",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "center",

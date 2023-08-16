@@ -9,7 +9,6 @@ const Projects = (): JSX.Element => {
         <h2 id="projects" className={styles.componenth2darkbg}>
           Projects
         </h2>
-        <br />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="grid gap-4">
             <div className="image-container">

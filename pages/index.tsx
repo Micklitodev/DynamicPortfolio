@@ -5,8 +5,6 @@ import Projects from "../component/projects";
 import CertSlideShow from "../component/certificates";
 import Contact from "../component/contact";
 import Skills from "../component/skills";
-import Reviews from "../component/reviews";
-import Footer from "../component/footer";
 import Sidebar from "../component/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,9 +25,9 @@ const Home = (): JSX.Element => {
         <Skills />
         <Projects />
         <CertSlideShow />
-        {/* <Reviews /> */}
+    
         <Contact />
-        <Footer />
+
       </main>
     </>
   );

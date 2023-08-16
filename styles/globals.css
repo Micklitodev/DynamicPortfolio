@@ -6,8 +6,8 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  --light: rgb(126, 126, 126);
-  --primary: rgb(255, 255, 255);
+  --light: rgba(59, 59, 59, 0.927);
+  --primary: rgba(21, 21, 21, 0.956);
 }
 
 * {

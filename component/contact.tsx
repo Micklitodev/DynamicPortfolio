@@ -62,7 +62,6 @@ const Contact = (): JSX.Element => {
   };
 
   const windowStyle: object = {
-    backgroundColor: `rgba(35, 35, 37, 1)`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
