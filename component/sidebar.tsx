@@ -74,67 +74,67 @@ const Sidebar = (): JSX.Element => {
           ""
         )}
 
-        <div className="md:block hidden fixed top-[25%] z-10">
+        <div className="md:block hidden fixed top-[20%] z-10">
           <div className="flex flex-col">
             <Link
               href="/"
-              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className=" custom-box-shadow rounded-full w-14 h-14  custom-sidebar-bg-color m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               <div className="flex flex-col items-center">
                 <BiHomeAlt2
                   style={{ color: "rgba(240, 240, 240, 0.75)" }}
                   size={18}
                 />
-                <span style={{ fontSize: 10, color: "white" }}>Home</span>
+                <span  style={{ fontSize: 10, color: 'white' , opacity:.7 }}>Home</span>
               </div>
             </Link>
             <Link
                      href="#skills"
               style={{backdropFilter: 'blur(20px)'}}
-              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className=" custom-box-shadow rounded-full w-14 h-14 custom-sidebar-bg-color m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               <div className="flex flex-col items-center">
                 <BiBarChartAlt2
                   style={{ color: "rgba(240, 240, 240, 0.75)" }}
                   size={18}
                 />
-                <span style={{ fontSize: 10, color: "white" }}>Skills</span>
+                <span  style={{ fontSize: 10, color: "white", opacity:.7 }}>Skills</span>
               </div>
             </Link>
             <Link
               href="#projects"
-              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="custom-box-shadow rounded-full w-14 h-14 custom-sidebar-bg-color m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               <div className="flex flex-col items-center">
                 <BiNetworkChart
                   style={{ color: "rgba(240, 240, 240, 0.75)" }}
                   size={18}
                 />
-                <span style={{ fontSize: 10, color: "white" }}>Projects</span>
+                <span  style={{ fontSize: 10, color: "white", opacity:.7 }}>Projects</span>
               </div>
             </Link>
             <Link
               href="#certs"
-              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="custom-box-shadow rounded-full w-14 h-14 custom-sidebar-bg-color  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               <div className="flex flex-col items-center">
                 <BiBookContent
                   style={{ color: "rgba(240, 240, 240, 0.75)" }}
                   size={18}
                 />
-                <span style={{ fontSize: 10, color: "white" }}>Certs</span>
+                <span style={{ fontSize: 10, color: "white", opacity:.7 }}>Certs</span>
               </div>
             </Link>
             <Link
               href="#contact"
-              className="rounded-full w-14 h-14 shadow-md bg-zinc-800 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="custom-box-shadow rounded-full w-14 h-14 custom-sidebar-bg-color m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               <div className="flex flex-col items-center">
                 <BiBookContent
                   style={{ color: "rgba(240, 240, 240, 0.75)" }}
                   size={18}
                 />
-                <span style={{ fontSize: 10, color: "white" }}>Contact</span>
+                <span  style={{ fontSize: 10, color: "white", opacity:.7 }}>Contact</span>
               </div>
             </Link>
           </div>

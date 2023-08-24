@@ -39,10 +39,10 @@ const Contact = (): JSX.Element => {
     } catch (Error) {
       console.log(Error);
     } finally {
-      // setFormSubmitted(true);
-      // setTimeout(() => {
-      //   window.location.href = "/";
-      // }, 2500);
+      setFormSubmitted(true);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 5000);
     }
   };
 
