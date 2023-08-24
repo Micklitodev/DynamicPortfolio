@@ -10,32 +10,42 @@ interface FormData {
 }
 
 const Contact = (): JSX.Element => {
+  const lambdaFuncEP: any = process.env.NEXT_PUBLIC_API_KEY;
   const [fromSubmitted, setFormSubmitted] = useState<boolean>(false);
-  const sendMail = async (mail: FormData) => {
-    try {
-      await fetch("https://joboffers-b3340-default-rtdb.firebaseio.com/.json", {
-        method: "POST",
-        body: JSON.stringify({
-          email: mail.email,
-          name: mail.name,
-          message: mail.message,
-        }),
-      });
-    } catch (Error) {
-      console.log(Error);
-    } finally {
-      setFormSubmitted(true);
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 2500);
-    }
-  };
-
   const [formData, setFormData] = useState<FormData>({
     email: "",
     name: "",
     message: "",
   });
+
+  const sendMail = async (mail: FormData) => {
+    console.log(mail.email)
+    try {
+      console.log(lambdaFuncEP)
+     const res = await fetch(lambdaFuncEP, {
+      mode: 'cors',  
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+        body: JSON.stringify({
+          fromEmail: mail.email,
+          name: mail.name,
+          message: mail.message,
+        }),
+      }).then((res) => console.log(res))
+
+    } catch (Error) {
+      console.log(Error);
+    } finally {
+      // setFormSubmitted(true);
+      // setTimeout(() => {
+      //   window.location.href = "/";
+      // }, 2500);
+    }
+  };
+
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
