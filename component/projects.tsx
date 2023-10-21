@@ -12,10 +12,7 @@ const Projects = (): JSX.Element => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="grid gap-4">
             <div className="image-container">
-              <Link
-                href="https://github.com/Micklitodev/projeCritter"
-                target="_blank"
-              >
+              <Link href="https://oxygen-dev.vercel.app/" target="_blank">
                 <Image
                   title="Test Image 1"
                   className="h-auto max-w-full rounded-lg"
@@ -27,21 +24,20 @@ const Projects = (): JSX.Element => {
                 />
                 <div className="image-overlay">
                   {" "}
-                  Proje-Critter:
+                  OxygenDev:
                   <br />
                   <br />
-                  Kanban Board that promotes productivity as task change the
-                  mood of your critter.
+                  SaaS example web app.
                   <br />
                   <br />
-                  React, Node, GraphQL, Apollo, JWT, Mongoose, MongoDB, Express,
-                  Bcrypt, Tailwind (MERN)
+                  Next.js, Typescript, Node, GraphQL, Apollo, JWT, Mongoose,
+                  MongoDB, Bcrypt, Tailwind (MERN)
                 </div>
               </Link>
             </div>
             <div className="image-container">
               <Link
-                href="https://github.com/Micklitodev/Social-Network-API"
+                href="https://github.com/Micklitodev/projeCritter"
                 target="_blank"
               >
                 <Image
@@ -54,13 +50,15 @@ const Projects = (): JSX.Element => {
                   priority
                 />
                 <div className="image-overlay">
-                  Social Network API:
+                  ProjeCritter:
                   <br />
                   <br />
-                  JS, MongoDB, Mongoose ORM, Express.js, Node.js
+                  Project Board that stimulates productivity threw task states
+                  that effect the animation of a the project creature.
                   <br />
                   <br />
-                  Backend API of a Social Network webpage.
+                  React.js, Tailwind, Apollo, Graphql, JWT, Mongoose, Express,
+                  Mongo, Bcrypt, Node.js (MERN)
                 </div>
               </Link>
             </div>
@@ -93,7 +91,7 @@ const Projects = (): JSX.Element => {
           <div className="grid gap-4">
             <div className="image-container">
               <Link
-                href="https://github.com/micklitodev/astro-atlas"
+                href="https://github.com/micklitodev/Paradise-Ecom"
                 target="_blank"
               >
                 <Image
@@ -106,19 +104,22 @@ const Projects = (): JSX.Element => {
                   priority
                 />
                 <div className="image-overlay">
-                  Astro-Atlas:
+                  Paradise Hemp Dispensary:
                   <br />
                   <br />
-                  Search for and save books that you are interested in.
+                  Search for products sold on Ecom store
                   <br />
                   <br />
-                  React, Node, GraphQL, Apollo, JWT, Mongoose, MongoDB, Express,
-                  Bcrypt, React Bootstrap (MERN)
+                  React, Javascript, Node, GraphQL, Express, Apollo, JWT,
+                  Mongoose, MongoDB, Bcrypt, React Bootstrap (MERN)
                 </div>
               </Link>
             </div>
             <div className="image-container">
-              <Link href="https://github.com/micklitodev/JATE" target="_blank">
+              <Link
+                href="https://github.com/Micklitodev/ChronosWears"
+                target="_blank"
+              >
                 <Image
                   title="Test Image 5"
                   className="h-auto max-w-full rounded-lg"
@@ -129,13 +130,13 @@ const Projects = (): JSX.Element => {
                   priority
                 />
                 <div className="image-overlay">
-                  JATE:
+                  OxygenDev Server:
                   <br />
                   <br />
-                  Progressive web as that is JATE (Just Another Text Editor)
+                  Backend for Oxygen Dev 
                   <br />
                   <br />
-                  PWA, JS, Node.js, Express.js, Webpack, IDB, Babel
+                   Typescript, GraphQL, Mongoose, Apollo Server, Node.js 
                 </div>
               </Link>
             </div>
@@ -168,7 +169,7 @@ const Projects = (): JSX.Element => {
           <div className="grid gap-4">
             <div className="image-container">
               <Link
-                href="https://github.com/micklitodev/Georgia-on-your-mind"
+                href="https://github.com/Micklitodev/ChronosWears"
                 target="_blank"
               >
                 <Image
@@ -180,16 +181,17 @@ const Projects = (): JSX.Element => {
                   width={500}
                   priority
                 />
+
                 <div className="image-overlay">
-                  Parkify:
+                  Chronos Wears:
                   <br />
                   <br />
-                  Leave reviews and tell us about your visit at Georgia state
-                  parks.
+                  Ecommerce Shop that allows you to buy sell products and review
+                  product sales, orders etc. threw saleor dashboard
                   <br />
                   <br />
-                  Fullstack, MVC , JS, Bcrypt, Express-Sessions, Sequelize,
-                  MySQL, Node, Handlebars.js
+                  Next.js, Typescript, Tailwind, Saleor, Graphql, Postgres,
+                  Node.js.
                 </div>
               </Link>
             </div>
@@ -248,7 +250,7 @@ const Projects = (): JSX.Element => {
           <div className="grid gap-4">
             <div className="image-container">
               <Link
-                href="https://github.com/micklitodev/dev-blog"
+                href="null"
                 target="_blank"
               >
                 <Image
@@ -261,13 +263,13 @@ const Projects = (): JSX.Element => {
                   priority
                 />
                 <div className="image-overlay">
-                  Dev-Blog:
+                  Weather Machine Learning:
                   <br />
                   <br />
-                  Blog to show the latest tech updates in the software industry.
+                  Basic Python Machine Learning App that guesses probability of accurate predictions using a csv and logistic regression. 
                   <br />
                   <br />
-                  Fullstack, MVC , JS, Bcrypt, Sessions, Sequelize, MySQL, Node
+                  Python, Numpy, CSV, Machine Learning
                 </div>
               </Link>
             </div>
@@ -293,9 +295,7 @@ const Projects = (): JSX.Element => {
                   colleagues can leave reviews on working with you.
                   <br />
                   <br />
-                  Fullstack, Next.js, Typescript, TSX, Tailwind, Dynamic
-                  Routing, MVC, Express-Sessions, Sequelize, MySQL, Bcrypt,
-                  Node.js
+                  Next.js, Typescript, AWS Lambda, Tailwind, Node.js
                 </div>
               </Link>
             </div>
