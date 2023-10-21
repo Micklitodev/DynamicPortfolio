@@ -250,7 +250,7 @@ const Projects = (): JSX.Element => {
           <div className="grid gap-4">
             <div className="image-container">
               <Link
-                href="null"
+                href="https://github.com/Micklitodev/Weather-Machine-Learning"
                 target="_blank"
               >
                 <Image
