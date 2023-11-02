@@ -73,10 +73,10 @@ const Skills = (): JSX.Element => {
                     className={`ninety h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
-                <p className={styles.skilltag}> Express </p>
+                <p className={styles.skilltag}> Python </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
+                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Mongo/Mongoose </p>
