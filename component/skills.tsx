@@ -25,28 +25,28 @@ const Skills = (): JSX.Element => {
             <div className={styles.frontend}>
               <h2>Frontend</h2>
               <div>
-                <p className={styles.skilltag}>Html</p>
+                <p className={styles.skilltag}>React Native</p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
+                    className={`sixtyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> React.js </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
+                    className={`ninety h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Typescript </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`ninety h-full rounded-full ${styles.barfillcolor}`}
+                    className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Tailwind </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
+                    className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Javascript </p>
@@ -58,7 +58,7 @@ const Skills = (): JSX.Element => {
                 <p className={styles.skilltag}> Three.js </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
+                    className={`seventyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
               </div>
@@ -76,13 +76,13 @@ const Skills = (): JSX.Element => {
                 <p className={styles.skilltag}> Python </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
+                    className={`seventyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Mongo/Mongoose </p>
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
+                    className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Node.js </p>
@@ -94,7 +94,7 @@ const Skills = (): JSX.Element => {
                 <p className={styles.skilltag}> MySQL/Sequelize </p>{" "}
                 <div className="h-5 w-60 sm:w-80 lg:w-96 overflow-hidden rounded-full bg-zinc-800">
                   <div
-                    className={`eightyfive h-full rounded-full ${styles.barfillcolor}`}
+                    className={`eighty h-full rounded-full ${styles.barfillcolor}`}
                   ></div>
                 </div>
                 <p className={styles.skilltag}> Next.js </p>

@@ -117,7 +117,7 @@ const Projects = (): JSX.Element => {
             </div>
             <div className="image-container">
               <Link
-                href="https://github.com/Micklitodev/ChronosWears"
+                href="https://github.com/Micklitodev/oxygendev-server"
                 target="_blank"
               >
                 <Image
@@ -169,7 +169,7 @@ const Projects = (): JSX.Element => {
           <div className="grid gap-4">
             <div className="image-container">
               <Link
-                href="https://github.com/Micklitodev/ChronosWears"
+                href="https://github.com/Micklitodev/TaskTracker-Mobile"
                 target="_blank"
               >
                 <Image
@@ -183,15 +183,13 @@ const Projects = (): JSX.Element => {
                 />
 
                 <div className="image-overlay">
-                  Chronos Wears:
+                  TaskTracker - Mobile:
                   <br />
                   <br />
-                  Ecommerce Shop that allows you to buy sell products and review
-                  product sales, orders etc. threw saleor dashboard
+                  Basic to-do list application for Android Mobile.
                   <br />
                   <br />
-                  Next.js, Typescript, Tailwind, Saleor, Graphql, Postgres,
-                  Node.js.
+                  React-Native, Flask, Python, Axios, Expo, SQLAlchemy
                 </div>
               </Link>
             </div>
